@@ -1,0 +1,16 @@
+.topbar{
+  align-items: center;
+  border-top-left-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+  display: flex;
+
+  height: 3em;
+  width: 100%;
+  background-color:#240c61;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.topbar div{
+  padding-left: 5em;
+}
