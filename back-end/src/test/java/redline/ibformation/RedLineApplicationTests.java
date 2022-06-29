@@ -1,4 +1,4 @@
-package RedLine.ibFormation;
+package redline.ibformation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

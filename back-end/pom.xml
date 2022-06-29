@@ -8,10 +8,10 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>RedLine</groupId>
-	<artifactId>ibFormation</artifactId>
+	<groupId>redline</groupId>
+	<artifactId>ibformation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RedLine</name>
+	<name>redline</name>
 	<description>Projet fil rouge ib Formation</description>
 	<properties>
 		<java.version>17</java.version>
