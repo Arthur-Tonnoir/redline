@@ -1,4 +1,4 @@
-package RedLine.ibFormation.controller;
+package redline.ibformation.controller;
 
 public class ThemeController {
 }

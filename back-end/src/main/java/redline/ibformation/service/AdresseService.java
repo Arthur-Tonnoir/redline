@@ -1,4 +1,4 @@
-package RedLine.ibFormation.service;
+package redline.ibformation.service;
 
 public class AdresseService {
 }

@@ -1,4 +1,4 @@
-package RedLine.ibFormation.entity;
+package redline.ibformation.entity;
 
 public class Formation {
 }

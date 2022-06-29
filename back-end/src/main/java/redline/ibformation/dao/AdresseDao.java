@@ -1,4 +1,4 @@
-package RedLine.ibFormation.dao;
+package redline.ibformation.dao;
 
 public interface AdresseDao {
 }
