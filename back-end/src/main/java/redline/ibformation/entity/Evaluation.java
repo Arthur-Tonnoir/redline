@@ -14,9 +14,6 @@ public class Evaluation {
     @OneToOne
     @JoinColumn(name = "utilisateur_id")
     private Utilisateur utilisateur;
-    @ManyToOne
-    @JoinColumn(name = "session_id")
-    private Session session;
 
     //Constructeurs
 
@@ -24,21 +21,19 @@ public class Evaluation {
         super();
     }
 
-    public Evaluation(int noteFormateur, int noteFormation, Utilisateur utilisateur, Session session) {
+    public Evaluation(int noteFormateur, int noteFormation, Utilisateur utilisateur) {
         super();
         this.setNoteFormateur(noteFormateur);
         this.setNoteFormation(noteFormation);
         this.setUtilisateur(utilisateur);
-        this.setSession(session);
     }
 
-    public Evaluation(Long id, int noteFormateur, int noteFormation, Utilisateur utilisateur, Session session) {
+    public Evaluation(Long id, int noteFormateur, int noteFormation, Utilisateur utilisateur) {
         super();
         this.setId(id);
         this.setNoteFormateur(noteFormateur);
         this.setNoteFormation(noteFormation);
         this.setUtilisateur(utilisateur);
-        this.setSession(session);
     }
     //getters
 
@@ -58,9 +53,6 @@ public class Evaluation {
         return utilisateur;
     }
 
-    public Session getSession() {
-        return session;
-    }
 
     //setters
 
@@ -80,7 +72,4 @@ public class Evaluation {
         this.utilisateur = utilisateur;
     }
 
-    public void setSession(Session session) {
-        this.session = session;
-    }
 }
