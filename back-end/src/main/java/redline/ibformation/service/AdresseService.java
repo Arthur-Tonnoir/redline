@@ -60,6 +60,10 @@ public class AdresseService {
         return this.adresseDao.save(adresse);
     }
 
+    /**
+     * supprime une adresse par son id
+     * @param id
+     */
     public void delete(Long id) {
         if (!this.adresseDao.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
