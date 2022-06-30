@@ -1,50 +1,110 @@
-<!-- <p>navbar works!</p> -->
-<div class="navbar">
-  <h2><span class="logo-big-letter-r">R</span><span class="logotext-r">ED</span>
-      <span class="logo-big-letter-l">L</span><span class="logotext-l">INE</span></h2>
 
-  <div class="wrap-searchbar">
-      <div class="search">
-         <input type="text" class="searchTerm" placeholder="mot-cle,formation">
-         <button type="submit" class="searchButton">
-          <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-          <!-- il faut importer angular material button -->
-          Recherche
-        </button>
-      </div>
-  </div>
+
+<div class="navbar">
+  <h2>
+    <span class="logo-big-letter-r">IT</span><span class="logotext-r"></span>
+    <span class="logo-big-letter-l">T</span
+    ><span class="logotext-l">raining</span>
+  </h2>
+
+  <form class="wrap-searchbar">
+    <mat-form-field class="searchbar" appearance="fill">
+      <mat-label>Formation</mat-label>
+      <input matInput placeholder="Ex. mot-cle,formation" name="#" />
+      <button matSuffix mat-button>
+        <span class="material-icons large"> search </span>
+      </button>
+    </mat-form-field>
+  </form>
 
   <div class="navbuttons-group">
-      <a  href="#">ACCEUIL</a>
-      <div class="navbarmega">
-          <div class="dropdown">
-            <a class="dropbtn">COURCES</a>
-            <div class="dropdown-content">
-              <div class="row">
-                <div class="column">
-                  <h3>Category 3</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 2</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-                <div class="column">
-                  <h3>Category 1</h3>
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>
-            </div>
+    <a href="#">ACCEUIL</a>
+
+    <!-- ============= Meganav bar ============== -->
+    <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">COURSES</a>
+
+    <div class="dropdown-menu megamenu" role="menu">
+      <div class="row g-3">
+        <div class="col-lg-3 col-6">
+          <div class="col-megamenu">
+            <h6 class="title">Domain Formation</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+            </ul>
           </div>
+          <!-- col-megamenu.// -->
+        </div>
+        <!-- end col-3 -->
+        <div class="col-lg-3 col-6">
+          <div class="col-megamenu">
+            <h6 class="title">Domain Formation</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+            </ul>
+          </div>
+          <!-- col-megamenu.// -->
+        </div>
+        <!-- end col-3 -->
+        <div class="col-lg-3 col-6">
+          <div class="col-megamenu">
+            <h6 class="title">Domain Formation</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+            </ul>
+          </div>
+          <!-- col-megamenu.// -->
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="col-megamenu">
+            <h6 class="title">Domain Formation</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+              <li><a href="#">Theme formation</a></li>
+            </ul>
+          </div>
+          <!-- col-megamenu.// -->
+        </div>
+        <!-- end col-3 -->
+      </div>
+      <!-- end row -->
     </div>
-    <a  href="#">CONTACT</a>
-    <a  href="#">ESPACE CLIENT </a>
+    <!-- dropdown-mega-menu.// -->
+
+    <!-- ============= Meganav bar ============== -->
+
+    <a href="#">CONTACT</a>
+    <a href="#">ESPACE CLIENT </a>
   </div>
 </div>
 
+<!-- js for meganav bar -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    /////// Prevent closing from click inside dropdown
+    document.querySelectorAll(".dropdown-menu").forEach(function (element) {
+      element.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    });
+  });
+  // DOMContentLoaded  end
+</script>
