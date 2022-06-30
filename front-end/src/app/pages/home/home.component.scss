@@ -2,14 +2,14 @@ body {
   margin: 0;
 }
 
-.cover-image{
+.cover-image {
   width: 100%;
   height: 100%;
   background-size: cover;
-  filter: brightness(40%)
+  filter: brightness(40%);
 }
 
-.framebar-frame-size-div{
+.framebar-frame-size-div {
   width: 100%;
   height: 50em;
 }
@@ -19,12 +19,12 @@ body {
   left: 10em;
   width: 50em;
   font-size: medium;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   font-weight: bold;
 }
 
-.img-button-big{
+.img-button-big {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,12 +38,9 @@ body {
   color: white;
   border-radius: 3em;
   font-weight: bold;
-
 }
 
-
-
-.home-on-image-title{
+.home-on-image-title {
   font-size: 4em;
   width: 100em;
   font-weight: bold;
