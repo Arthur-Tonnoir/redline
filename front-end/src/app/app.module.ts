@@ -11,7 +11,6 @@ import {MatRadioModule} from '@angular/material/radio';
 
 
 import { AppComponent } from './app.component';
-import { TopbarComponent } from './commons/topbar/topbar.component';
 import { NavbarComponent } from './commons/navbar/navbar.component';
 import { FooterComponent } from './commons/footer/footer.component';
 import { NotfoundComponent } from './commons/notfound/notfound.component';
@@ -31,7 +30,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TopbarComponent,
     NavbarComponent,
     FooterComponent,
     NotfoundComponent,
