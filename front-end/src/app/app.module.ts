@@ -9,6 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 
+import { HttpClientModule} from '@angular/common/http'
+
 
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './commons/topbar/topbar.component';
@@ -57,9 +59,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatRadioModule
-
-
+    MatRadioModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
