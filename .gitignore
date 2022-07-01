@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/back-end/src/main/resources/application.properties
 
 # Node
 /node_modules
