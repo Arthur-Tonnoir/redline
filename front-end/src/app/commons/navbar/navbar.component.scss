@@ -1,179 +1,90 @@
-.topbar div{
+.topbar div {
   padding-left: 5em;
 }
-.navbar{
+.navbar {
   align-items: center;
   display: flex;
   justify-content: space-around;
   padding-top: 1px;
-  height: 5em;
+  height: 7em;
   width: 100%;
-  background-color:white;
+  background-color: white;
+  border-bottom: solid #240c61 1px;
 }
 
-
-.logotext-l{
+.logotext-l {
   color: blue;
 }
-.logotext-r{
+
+.logotext-r {
   color: red;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/*Mega menu */
-
-.navbarmega {
-  overflow: hidden;
-  background-color: #333;
+  /*  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropbtn {
-  background-color: white;
-}
-
-.dropdown .a {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  font: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:none;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: 1;
-}
-
-.dropdown-content .header {
-  background: red;
-  padding: 16px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: right;
-  width: 15em;
-  padding: 5em;
-  background-color:white;
-  height: 20em;
-}
-
-.column a {
-  float: none;
-  color: black;
-  padding: 1em;
-  display: block;
-  text-align: center;
-}
-
-.column a:hover {
-  background-color: #ddd;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-    height: auto;
-  }
-
-}
-
-
-
-
-.logo-big-letter-r{
+.logo-big-letter-r {
   /* font-size: 2em; */
   color: red;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.logo-big-letter-l{
+.logo-big-letter-l {
   font-size: 2em;
   color: blue;
 }
 
 .navbuttons-group {
   width: 30em;
- display: flex;
- justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.navbuttons-group a{
-  text-decoration:none;
-  color:#240c61
+.navbuttons-group a {
+  text-decoration: none;
+  color: #240c61;
 }
 
-
-/*
-Searchbar
-*/
-
-.search {
-
-width: 100%;
-position: relative;
-display: flex;
+.searchbar {
+  height: 4.5em;
+  width: 40em;
+  border: solid 2px #240c61;
+  /* background-color: gray; */
 }
 
-.searchTerm {
-width: 100%;
-border: 0.3em solid #240c61;
-border-right: none;
-padding: 5px;
-height: 20px;
-border-radius: 0.3em 0 0 0.3em;
-outline: none;
-color: #9DBFAF;
+.wrap-searchbar {
+  color: #240c61;
 }
 
-.searchTerm:focus{
-color: black;
-
+/*searchbar button*/
+.mat-button {
+  height: 4em;
 }
 
-.searchButton {
-width: 9em;
-height: 2.7em;
-border: 0.3em solid #240c61;
-background: #240c61;
-text-align: center;
-color: white;
-border-radius: 0 0.3em 0.3em 0;
-cursor: pointer;
-font-size: 0.9em;
-
+/*meganavbar*/
+.navbar .megamenu {
+  padding: 1rem;
 }
-
-/*Resize the wrap to see the search bar change!*/
-.wrap-searchbar{
-
-width: 40em;
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .has-megamenu {
+    position: static !important;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+  }
 }
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 10px;
+  }
+}
+/*finish meganavbar*/
