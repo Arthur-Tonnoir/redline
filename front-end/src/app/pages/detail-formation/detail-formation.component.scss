@@ -76,6 +76,13 @@ body {
   width: 50em;
 }
 
+/*collapse*/
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height .5s;
+}
+
 
 
 .session-info {
