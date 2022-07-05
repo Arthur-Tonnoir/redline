@@ -18,7 +18,7 @@
   </form>
 
   <div class="navbuttons-group">
-    <a href="#">ACCEUIL</a>
+    <a href="#" >ACCEUIL</a>
 
     <!-- ============= Meganav bar ============== -->
     <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">COURSES</a>
@@ -26,60 +26,15 @@
     <div class="dropdown-menu megamenu" role="menu">
       <div class="row g-3">
         <div class="col-lg-3 col-6">
-          <div class="col-megamenu">
-            <h6 class="title">Domain Formation</h6>
-            <ul class="list-unstyled">
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-            </ul>
-          </div>
-          <!-- col-megamenu.// -->
-        </div>
-        <!-- end col-3 -->
-        <div class="col-lg-3 col-6">
-          <div class="col-megamenu">
-            <h6 class="title">Domain Formation</h6>
-            <ul class="list-unstyled">
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-            </ul>
-          </div>
-          <!-- col-megamenu.// -->
-        </div>
-        <!-- end col-3 -->
-        <div class="col-lg-3 col-6">
-          <div class="col-megamenu">
-            <h6 class="title">Domain Formation</h6>
-            <ul class="list-unstyled">
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-            </ul>
-          </div>
-          <!-- col-megamenu.// -->
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="col-megamenu">
-            <h6 class="title">Domain Formation</h6>
-            <ul class="list-unstyled">
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-              <li><a href="#">Theme formation</a></li>
-            </ul>
+          <div class="col-megamenu" *ngFor="let domaine of domaines">
+            <h6 class="title" >{{domaine.nomDomaine}}</h6>
+            <div *ngFor="let theme of themes">
+              <ul class="list-unstyled" *ngIf="domaine.id == theme.domaineFormation.id">
+                <li>
+                  <a href="#" >{{theme.nomTheme}}</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- col-megamenu.// -->
         </div>
