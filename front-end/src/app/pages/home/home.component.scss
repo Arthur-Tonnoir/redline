@@ -24,13 +24,14 @@ body {
   font-weight: bold;
 }
 
-.img-button-big {
+
+.img-button-big{
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 11em;
-  bottom: 14em;
+  left: 5em;
+  top: 25em;
   width: 20em;
   height: 5em;
   border: 0.3em solid #240c61;
@@ -38,8 +39,8 @@ body {
   color: white;
   border-radius: 3em;
   font-weight: bold;
-}
 
+}
 .home-on-image-title {
   font-size: 4em;
   width: 100em;
