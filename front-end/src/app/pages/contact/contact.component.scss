@@ -1,0 +1,67 @@
+.frame-detail-contact{
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90em;
+  min-height : 60em;
+  background-color: gray;
+}
+
+.top-div{
+  display: flex;
+  padding-left: 2em;
+  align-items: center;
+  width: 90em;
+  height: 4em;
+  border: solid white 1px;
+}
+
+.middle-div{
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-left: 2em;
+  align-items: top;
+  width: 90em;
+  height: 28em;
+  border: solid white 1px;
+}
+.middle-div-phone{
+  margin-top: 1em;
+}
+.middle-div-email{
+  margin-top: 3em;
+}
+.middle-div-adresse{
+  margin-top: 3em;
+}
+
+.bottom-div{
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-left: 2em;
+  width: 90em;
+  height: 40em;
+  border: solid white 1px;
+}
+#input-mail-adresse{
+ width: 45em;
+ margin-left: 0;
+ margin-bottom: 2em;
+}
+#input-message{
+  margin-top :1em;
+  width: 45em;
+  height: 15em;
+  margin-left: 0;
+ }
+.bottom-div .btn {
+  color: black;
+  background-color: #4a544d;
+  margin-left: 45%;
+}
+label{
+  margin-top: 1em;
+  margin-bottom: 1px;
+}
