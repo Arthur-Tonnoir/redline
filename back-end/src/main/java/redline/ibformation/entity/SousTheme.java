@@ -1,6 +1,7 @@
 package redline.ibformation.entity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -18,7 +19,7 @@ public class SousTheme {
     private Theme theme;
     @ManyToMany
     @JoinTable(name = "soustheme_formation", joinColumns = @JoinColumn(name = "soustheme_id"), inverseJoinColumns = @JoinColumn(name = "formation_id"))
-    Set<Formation> formationSet;
+    private List<Formation> listFormation;
     //voir si on doit utiliser set formation ou une seule formation
     //private Formation formation;
 
@@ -27,19 +28,19 @@ public class SousTheme {
         super();
     }
 
-    public SousTheme(String nomSousTheme,Theme theme, Set<Formation> formationSet) {
+    public SousTheme(String nomSousTheme,Theme theme, List<Formation> formationSet) {
         super();
         this.setNomSousTheme(nomSousTheme);
         this.setTheme(theme);
-        this.setFormationSet(formationSet);
+        this.setFormations(formationSet);
     }
 
-    public SousTheme(Long id, String nomSousTheme,Theme theme, Set<Formation> formationSet) {
+    public SousTheme(Long id, String nomSousTheme,Theme theme, List<Formation> formationSet) {
         super();
         this.setId(id);
         this.setNomSousTheme(nomSousTheme);
         this.setTheme(theme);
-        this.setFormationSet(formationSet);
+        this.setFormations(formationSet);
     }
 
     //getters
@@ -55,8 +56,8 @@ public class SousTheme {
         return theme;
     }
 
-    public Set<Formation> getFormationSet() {
-        return formationSet;
+    public List<Formation> getFormations() {
+        return listFormation;
     }
 
     //setters
@@ -72,7 +73,7 @@ public class SousTheme {
         this.theme = theme;
     }
 
-    public void setFormationSet(Set<Formation> formationSet) {
-        this.formationSet = formationSet;
+    public void setFormations(List<Formation> formationSet) {
+        this.listFormation = formationSet;
     }
 }
