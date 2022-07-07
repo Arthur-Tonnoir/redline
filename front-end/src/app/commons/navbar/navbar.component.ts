@@ -11,8 +11,6 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-
   domaines: Domaine[] = [];
 
   themes: Theme[] = [];
