@@ -7,6 +7,7 @@ import { ListFormationComponent } from './pages/list-formation/list-formation.co
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { EnregSessionComponent } from './pages/enreg-session/enreg-session.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { EspaceClientComponent } from './pages/espace-client/espace-client.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'listformation', component:ListFormationComponent},
   {path: 'enregsession',component:EnregSessionComponent},
   {path: 'contact', component:ContactComponent},
+  {path: 'espaceclient', component:EspaceClientComponent},
   {path: '**', component:NotfoundComponent}];
 
 @NgModule({
