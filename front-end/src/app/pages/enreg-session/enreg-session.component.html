@@ -3,7 +3,7 @@
     <H4 class="title">FORMULAIRE D'ENREGISTREMENT A LA SESSION PRESELECTIONNE</H4>
   </div>
   <div class="middle-frame-enreg-session">
-    <form class="no-needs-validation" novalidate>
+    <form (ngSubmit)="ajoutUtilisateur()" class="no-needs-validation">
     <h6 class="sous-title">Nom de la formation</h6>
     <div class="mb-3">Session :</div>
     <div class="mb-3" aria-disabled="true">Prix :</div>
@@ -24,6 +24,7 @@
             placeholder="Ex. Dutrouc"
             value=""
             required=""
+            [(ngModel)]="utilisateur.nom"
           />
           <div class="invalid-feedback">Nom valide requis!</div>
         </div>
@@ -36,6 +37,7 @@
             placeholder="Ex. Paul"
             value=""
             required=""
+            [(ngModel)]="utilisateur.prenom"
           />
           <div class="invalid-feedback">Prénom valide requis!</div>
         </div>
@@ -48,6 +50,7 @@
           class="form-control"
           id="email"
           placeholder="you@example.com"
+          [(ngModel)]="utilisateur.email"
         />
         <div class="invalid-feedback">E-mail valide requis!</div>
       </div>
@@ -58,6 +61,7 @@
           class="form-control"
           id="telephone"
           placeholder="Ex. 0652124789"
+          [(ngModel)]="utilisateur.telephone"
         />
         <div class="invalid-feedback">Numéro de téléphone valide requis!</div>
       </div>
@@ -71,6 +75,7 @@
           class="form-control"
           id="entreprise"
           placeholder="Ex. Google"
+          [(ngModel)]="utilisateur.nomEntreprise"
         />
       </div>
     </form>
@@ -85,6 +90,7 @@
           id="numero"
           placeholder="Ex. 123"
           required=""
+          [(ngModel)]="adresse.numero"
         />
       </div>
       <div class="mb-3">
@@ -94,6 +100,7 @@
           class="form-control"
           id="rue"
           placeholder="Ex. Rue de la Marlière"
+          [(ngModel)]="adresse.rue"
         />
       </div>
       <div class="mb-3">
@@ -105,6 +112,7 @@
           class="form-control"
           id="complement"
           placeholder="Ex. appartement n°B23"
+          [(ngModel)]="adresse.complement"
         />
       </div>
       <div class="row">
@@ -116,6 +124,7 @@
             id="ville"
             required=""
             placeholder="Ex. Lille"
+            [(ngModel)]="adresse.ville"
           />
         </div>
         <div class="col-md-3 mb-3">
@@ -126,12 +135,12 @@
             id="zip"
             placeholder="Ex. 96321"
             required=""
+            [(ngModel)]="adresse.codePostal"
           />
           <div class="invalid-feedback">Code postal valide requis!</div>
         </div>
       </div>
     </form><button class="btn-validation-formulaire" type="submit">
-      <!-- btn btn-primary btn-lg btn-block -->
         Valider
       </button>
   </form>
