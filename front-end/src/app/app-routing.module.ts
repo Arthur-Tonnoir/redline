@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListFormationComponent } from './pages/list-formation/list-formation.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { EspaceClientComponent } from './pages/espace-client/espace-client.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'detailformation/:id', component:DetailFormationComponent},
   {path: 'listformation', component:ListFormationComponent},
   {path: 'contact', component:ContactComponent},
+  {path: 'espaceclient', component:EspaceClientComponent},
   {path: '**', component:NotfoundComponent}];
 
 @NgModule({
