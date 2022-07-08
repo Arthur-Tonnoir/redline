@@ -1,90 +1,81 @@
-.topbar div {
+.topbar div{
   padding-left: 5em;
 }
-.navbar {
+.navbar{
   align-items: center;
   display: flex;
   justify-content: space-around;
   padding-top: 1px;
   height: 7em;
   width: 100%;
-  background-color: white;
+  background-color:white;
   border-bottom: solid #240c61 1px;
 }
 
-.logotext-l {
+
+.logotext{
   color: blue;
 }
 
-.logotext-r {
-  color: red;
-  /*  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.logo-big-letter-r {
-  /* font-size: 2em; */
-  color: red;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.logo-big-letter-l {
+.logo-big-letter{
   font-size: 2em;
-  color: blue;
+  color: orange;
 }
+
+.logo-small-letter{
+  color: orange;
+}
+
+a:link { text-decoration: none; }
 
 .navbuttons-group {
   width: 30em;
-  display: flex;
-  justify-content: space-between;
+ display: flex;
+ justify-content: space-between;
 }
 
-.navbuttons-group a {
-  text-decoration: none;
-  color: #240c61;
+.navbuttons-group a{
+  text-decoration:none;
+  color:#240c61
 }
 
-.searchbar {
+.searchbar{
   height: 4.5em;
   width: 40em;
   border: solid 2px #240c61;
-  /* background-color: gray; */
 }
 
-.wrap-searchbar {
+.wrap-searchbar{
   color: #240c61;
 }
 
 /*searchbar button*/
-.mat-button {
-  height: 4em;
+.mat-button{
+  height: 4.0em;
+
 }
 
+
+
 /*meganavbar*/
-.navbar .megamenu {
-  padding: 1rem;
-}
+.navbar .megamenu{ padding: 1rem; }
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
-  .navbar .has-megamenu {
-    position: static !important;
-  }
-  .navbar .megamenu {
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-top: 0;
-  }
+
+  .navbar .has-megamenu{position:static!important;}
+  .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+
 }
 /* ============ desktop view .end// ============ */
 
+
 /* ============ mobile view ============ */
-@media (max-width: 991px) {
-  .navbar.fixed-top .navbar-collapse,
-  .navbar.sticky-top .navbar-collapse {
+@media(max-width: 991px){
+  .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
     overflow-y: auto;
-    max-height: 90vh;
-    margin-top: 10px;
+      max-height: 90vh;
+      margin-top:10px;
   }
 }
 /*finish meganavbar*/
