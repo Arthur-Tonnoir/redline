@@ -10,7 +10,10 @@
 .top-frame-enreg-session {
   font-size: medium;
   background-color: grey;
-  height: auto;
+  height: 5em;
+  align-items: center;
+  display: flex;
+  padding-left: 5em;
 }
 //la div qui contient les éléments du formulaire à remplir
 .middle-frame-enreg-session {
@@ -33,16 +36,15 @@
 }
 //les label du formulaire
 .mb-3 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 //les différents sous-titres qui subdivisent le formulaire
 .sous-title {
-  font-size: 2.8em;
+  text-align: left;
 }
 //le titre principal du formulaire
 .title {
-  margin-left: 10px;
-  font-size: 2.8em;
+text-align: center;
 }
 //pour les inputs du formulaire
 .form-control {
@@ -51,14 +53,21 @@
 
 //le bouton de validation du formulaire
 .btn-validation-formulaire{
+  border-radius: 0 !important;
   background-color: gray;
   width: 7em;
   font-size: 2em;
   margin-left: 38em;
   outline: none !important;
   box-shadow: none;
+  margin-bottom: 2em;
 }
 
-.break{
-
+hr{
+  height: 4px;
+  border-width: 2px;
+  width: 89em;
+}
+input{
+  border-radius: 0 !important;
 }

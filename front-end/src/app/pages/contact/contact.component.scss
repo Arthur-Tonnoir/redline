@@ -48,20 +48,29 @@
 #input-mail-adresse{
  width: 45em;
  margin-left: 0;
- margin-bottom: 2em;
+ margin-bottom: 1em;
 }
 #input-message{
   margin-top :1em;
   width: 45em;
-  height: 15em;
+  height: 10em;
   margin-left: 0;
  }
 .bottom-div .btn {
   color: black;
   background-color: #4a544d;
   margin-left: 45%;
+  border-radius: 0 !important;
 }
 label{
   margin-top: 1em;
   margin-bottom: 1px;
+}
+input {
+  font-size: 1.5em;
+  border-radius: 0 !important;
+}
+textarea {
+  font-size: 1.5em;
+  border-radius: 0 !important;
 }
