@@ -4,7 +4,7 @@
   margin-right: auto;
   width: 90em;
   min-height : 60em;
-  background-color: gray;
+  background-color: #c0c0c0;
 }
 
 .top-div{
@@ -58,9 +58,11 @@
  }
 .bottom-div .btn {
   color: black;
-  background-color: #4a544d;
+  background-color: gray;
   margin-left: 45%;
   border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none;
 }
 label{
   margin-top: 1em;
