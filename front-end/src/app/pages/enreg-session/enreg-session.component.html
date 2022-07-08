@@ -10,32 +10,27 @@
     <div class="mb-3">Lieu :</div></form>
   </div>
   <div class="bottom-frame-enreg-session">
-    <form>
-    <form class="needs-validation" novalidate="">
+    <form [formGroup]="utilisateurForm" class="needs-validation">
       <h1 class="sous-title">Civilité</h1>
       <hr>
       <div class="row">
         <div class="col-md-6 mb-3">
-          <label for="firstName">Nom : </label>
+          <label for="nom">Nom : </label>
           <input
             type="text"
             class="form-control"
-            id="firstName"
             placeholder="Ex. Dutrouc"
-            value=""
-            required=""
+            formControlName="nom"
           />
           <div class="invalid-feedback">Nom valide requis!</div>
         </div>
         <div class="col-md-6 mb-3">
-          <label for="lastName">Prénom : </label>
+          <label for="prenom">Prénom : </label>
           <input
             type="text"
             class="form-control"
-            id="lastName"
             placeholder="Ex. Paul"
-            value=""
-            required=""
+            formControlName="prenom"
           />
           <div class="invalid-feedback">Prénom valide requis!</div>
         </div>
@@ -46,8 +41,8 @@
         <input
           type="email"
           class="form-control"
-          id="email"
           placeholder="you@example.com"
+          formControlName="email"
         />
         <div class="invalid-feedback">E-mail valide requis!</div>
       </div>
@@ -56,8 +51,8 @@
         <input
           type="telephone"
           class="form-control"
-          id="telephone"
           placeholder="Ex. 0652124789"
+          formControlName="telephone"
         />
         <div class="invalid-feedback">Numéro de téléphone valide requis!</div>
       </div>
@@ -69,12 +64,10 @@
         <input
           type="entreprise"
           class="form-control"
-          id="entreprise"
           placeholder="Ex. Google"
+          formControlName="entreprise"
         />
       </div>
-    </form>
-    <form class="needs-validation" novalidate="">
       <h1 class="sous-title">Adresse</h1>
       <hr>
       <div class="mb-3">
@@ -82,9 +75,8 @@
         <input
           type="text"
           class="form-control"
-          id="numero"
           placeholder="Ex. 123"
-          required=""
+          formControlName="numero"
         />
       </div>
       <div class="mb-3">
@@ -92,8 +84,8 @@
         <input
           type="text"
           class="form-control"
-          id="rue"
           placeholder="Ex. Rue de la Marlière"
+          formControlName="rue"
         />
       </div>
       <div class="mb-3">
@@ -103,8 +95,8 @@
         <input
           type="text"
           class="form-control"
-          id="complement"
           placeholder="Ex. appartement n°B23"
+          formControlName="complement"
         />
       </div>
       <div class="row">
@@ -113,9 +105,8 @@
           <input
             type="text"
             class="form-control"
-            id="ville"
-            required=""
             placeholder="Ex. Lille"
+            formControlName="ville"
           />
         </div>
         <div class="col-md-3 mb-3">
@@ -123,14 +114,13 @@
           <input
             type="text"
             class="form-control"
-            id="zip"
             placeholder="Ex. 96321"
-            required=""
+            formControlName="codePostal"
           />
           <div class="invalid-feedback">Code postal valide requis!</div>
         </div>
       </div>
-    </form><button class="btn-validation-formulaire" type="submit">
+    <button class="btn-validation-formulaire" type="submit">
         Valider
       </button>
   </form>
