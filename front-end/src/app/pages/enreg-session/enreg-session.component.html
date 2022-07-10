@@ -3,7 +3,7 @@
     <h1 class="title">FORMULAIRE D'ENREGISTREMENT A LA SESSION PRESELECTIONNE</h1>
   </div>
   <div class="middle-frame-enreg-session">
-    <form class="no-needs-validation" novalidate>
+    <form [formGroup]="utilisateurForm" (ngSubmit)="onSubmit()" class="no-needs-validation" novalidate>
     <h1 class="sous-title">Nom de la formation</h1>
     <div class="mb-3">Session :</div>
     <div class="mb-3" aria-disabled="true">Prix :</div>
@@ -22,7 +22,7 @@
             placeholder="Ex. Dutrouc"
             formControlName="nom"
           />
-          <div class="invalid-feedback">Nom valide requis!</div>
+          <!-- <span *ngIf="submitted && form['nom'].invalid"> * Nom invalide</span> -->
         </div>
         <div class="col-md-6 mb-3">
           <label for="prenom">Prénom : </label>
@@ -32,7 +32,7 @@
             placeholder="Ex. Paul"
             formControlName="prenom"
           />
-          <div class="invalid-feedback">Prénom valide requis!</div>
+          <!-- <span *ngIf="submitted && form['prenom'].invalid"> * Prénom invalide</span> -->
         </div>
       </div>
 
@@ -44,17 +44,17 @@
           placeholder="you@example.com"
           formControlName="email"
         />
-        <div class="invalid-feedback">E-mail valide requis!</div>
+        <!-- <span *ngIf="submitted && form['email'].invalid"> * Email invalide</span> -->
       </div>
       <div class="mb-3">
         <label for="telephone">Téléphone : </label>
         <input
-          type="telephone"
+          type="tel"
           class="form-control"
           placeholder="Ex. 0652124789"
           formControlName="telephone"
         />
-        <div class="invalid-feedback">Numéro de téléphone valide requis!</div>
+        <!-- <span *ngIf="submitted && form['telephone'].invalid"> * Téléphone invalide</span> -->
       </div>
 
       <div class="mb-3">
@@ -73,11 +73,12 @@
       <div class="mb-3">
         <label for="numero">Numéro : </label>
         <input
-          type="text"
+          type="number"
           class="form-control"
           placeholder="Ex. 123"
           formControlName="numero"
         />
+        <!-- <span *ngIf="submitted && form['numero'].invalid"> * Numéro de rue invalide</span> -->
       </div>
       <div class="mb-3">
         <label for="rue">Rue : </label>
@@ -87,6 +88,7 @@
           placeholder="Ex. Rue de la Marlière"
           formControlName="rue"
         />
+        <!-- <span *ngIf="submitted && form['rue'].invalid"> * Nom de rue invalide</span> -->
       </div>
       <div class="mb-3">
         <label for="complement"
@@ -108,6 +110,7 @@
             placeholder="Ex. Lille"
             formControlName="ville"
           />
+          <!-- <span *ngIf="submitted && form['ville'].invalid"> * Ville invalide</span> -->
         </div>
         <div class="col-md-3 mb-3">
           <label for="zip">Code postal</label>
@@ -117,7 +120,7 @@
             placeholder="Ex. 96321"
             formControlName="codePostal"
           />
-          <div class="invalid-feedback">Code postal valide requis!</div>
+          <!-- <span *ngIf="submitted && form['codePostal'].invalid"> * Code postal invalide</span> -->
         </div>
       </div>
     <button class="btn-validation-formulaire" type="submit">
