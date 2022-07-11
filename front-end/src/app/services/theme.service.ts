@@ -16,7 +16,7 @@ export class ThemeService {
     return this.httpClient.get<Theme[]>(`${this.apiUrl}/Theme`);
   }
 
-  getTheme(id: number): Observable<Theme[]> {
-    return this.httpClient.get<Theme[]>(`${this.apiUrl}/Theme/${id}`);
+  getTheme(id: number): Observable<Theme> {
+    return this.httpClient.get<Theme>(`${this.apiUrl}/Theme/${id}`);
   }
 }
