@@ -19,10 +19,10 @@
           aria-expanded="true"
           aria-controls="collapseExample"
         >
-          General
+         <h3>General</h3>
         </a>
       </p>
-      <div class="collapse" id="collapseExample">
+      <div class="collapse show" id="collapseExample">
         <div class="card card-body">
           Some placeholder content for the collapse component. This panel is
           hidden by default but revealed when the user activates the relevant
@@ -39,7 +39,7 @@
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          Pré-requis
+         <h3>Pré-requis</h3>
         </a>
       </p>
       <div class="collapse" id="collapseExample1">
@@ -59,7 +59,7 @@
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          Programme détaillé
+         <h3> Programme détaillé</h3>
         </a>
       </p>
       <div class="collapse" id="collapseExample2">
@@ -87,13 +87,13 @@
 
       <hr />
       <h3>Liste des sessions disponibles</h3>
-
+      
       <div class="session-info" *ngIf="listSession.length > 0">
         <section *ngFor="let session of listSession">
           <mat-radio-group aria-label="Select an option" onload="getDate(session.id)" >
             <mat-radio-button value="1">{{session.debutSession | date: 'shortDate'}} au {{session.finSession | date: 'shortDate'}} a {{session.lieuFormation}}</mat-radio-button>
           </mat-radio-group>
-          <button class="btn btn-lg">Inscrivez-vous</button>
+          <button class="btn btn-lg" routerLink="/enregsession">Inscrivez-vous</button>
         </section>
       </div>
     </div>

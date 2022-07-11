@@ -2,10 +2,9 @@
 
 <div class="navbar">
   <h2>
-    <span class="logo-big-letter-r">IT</span><span class="logotext-r"></span>
-    <span class="logo-big-letter-l">T</span
-    ><span class="logotext-l">raining</span>
+    <a routerLink="/home"><span class="logo-small-letter">i</span><span class="logo-big-letter">T</span><span class="logotext">raining</span></a>
   </h2>
+
 
   <form class="wrap-searchbar">
     <mat-form-field class="searchbar" appearance="fill">
@@ -25,8 +24,8 @@
 
     <div class="dropdown-menu megamenu" role="menu">
       <div class="row g-3">
-        <div class="col-lg-3 col-6">
-          <div class="col-megamenu" *ngFor="let domaine of domaines">
+        <div class="col-lg-3 col-6" *ngFor="let domaine of domaines">
+          <div class="col-megamenu">
             <h6 class="title" >{{domaine.nomDomaine}}</h6>
             <div *ngFor="let theme of themes">
               <ul class="list-unstyled" *ngIf="domaine.id == theme.domaineFormation.id">
@@ -46,8 +45,8 @@
 
     <!-- ============= Meganav bar ============== -->
 
-    <a href="#">CONTACT</a>
-    <a href="#">ESPACE CLIENT </a>
+    <a routerLink="/contact">CONTACT</a>
+    <a  routerLink="/espaceclient">ESPACE CLIENT </a>
   </div>
 </div>
 

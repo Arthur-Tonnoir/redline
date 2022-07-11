@@ -5,6 +5,10 @@ import { DetailFormationComponent } from './pages/detail-formation/detail-format
 import { HomeComponent } from './pages/home/home.component';
 import { ListFormationComponent } from './pages/list-formation/list-formation.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { EnregSessionComponent } from './pages/enreg-session/enreg-session.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { EspaceClientComponent } from './pages/espace-client/espace-client.component';
+
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -12,6 +16,9 @@ const routes: Routes = [
   {path: 'catalogue', component:CatalogueComponent},
   {path: 'detailformation/:id', component:DetailFormationComponent},
   {path: 'listformation/:id', component:ListFormationComponent},
+  {path: 'enregsession',component:EnregSessionComponent},
+  {path: 'contact', component:ContactComponent},
+  {path: 'espaceclient', component:EspaceClientComponent},
   {path: '**', component:NotfoundComponent}];
 
 @NgModule({
