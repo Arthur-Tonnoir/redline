@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'catalogue', component:CatalogueComponent},
   {path: 'detailformation/:id', component:DetailFormationComponent},
-  {path: 'listformation', component:ListFormationComponent},
+  {path: 'listformation/:id', component:ListFormationComponent},
   {path: '**', component:NotfoundComponent}];
 
 @NgModule({
