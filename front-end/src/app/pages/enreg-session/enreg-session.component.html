@@ -25,7 +25,7 @@
           formControlName="nom"
         />
 
-        <span *ngIf="soumis && form['nom'].invalid">
+        <span *ngIf="soumis && form['nom']">
           <span *ngIf="form['nom'].hasError('minLenght')">
             * Le nom doit contenir au moins 2 caractères
           </span>
@@ -41,7 +41,7 @@
           formControlName="prenom"
         />
 
-        <span *ngIf="soumis && form['prenom'].invalid">
+        <span *ngIf="soumis && form['prenom']">
           <span *ngIf="form['prenom'].hasError('minLenght')">
             * Le prénom doit contenir au moins 2 caractères
           </span>
@@ -116,7 +116,7 @@
           formControlName="rue"
         />
 
-        <span *ngIf="soumis && form['rue'].invalid">
+        <span *ngIf="soumis && form['rue']">
           <span *ngIf="form['rue'].hasError('minLenght')">
             * Le nom de rue doit contenir au moins 2 caractères
           </span>
@@ -145,7 +145,7 @@
             formControlName="ville"
           />
 
-          <span *ngIf="soumis && form['ville'].invalid">
+          <span *ngIf="soumis && form['ville']">
             <span *ngIf="form['ville'].hasError('minLenght')">
               * La ville doit contenir au moins 2 caractères
             </span>
@@ -160,7 +160,7 @@
             placeholder="Ex. 96321"
             formControlName="codePostal"
           />
-          <span *ngIf="soumis && form['codePostal'].invalid">
+          <span *ngIf="soumis && form['codePostal']">
             <span *ngIf="form['codePostal'].hasError('minLenght')">
               * Le code postal doit contenir au moins 2 caractères
             </span>

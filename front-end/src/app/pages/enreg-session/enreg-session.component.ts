@@ -17,31 +17,11 @@ export class EnregSessionComponent implements OnInit {
   session!: Session;
   utilisateur!: Utilisateur;
   adresseClient!: Adresse;
-  id_adresse!:number;
+  id_adresse!: number;
+  utilisateurForm!: FormGroup;
 
   soumis: boolean = false;
-  utilisateurForm: FormGroup = this.formBuilder.group({
-    nom: ['', [Validators.minLength(2), Validators.required]],
-    prenom: ['', [Validators.minLength(2), Validators.required]],
-    email: ['', [Validators.email, Validators.required]],
-    telephone: ['', [Validators.minLength(10), Validators.required]],
-    adresse: this.formBuilder.group({
-      numero: ['', [Validators.minLength(1), Validators.required]],
-      rue: ['', [Validators.minLength(2), Validators.required]],
-      complement: [''],
-      codePostal: ['', [Validators.minLength(5), Validators.required]],
-      ville: ['', [Validators.minLength(2), Validators.required]],
-    }),
-    fonctionResponsable: [''],
-    serviceAssocie: [''],
-    nomEntreprise: [''],
-    session: [''],
-    experience: [''],
-    noteFormateur: [''],
-    estClient: [true],
-    estFormateur: [false],
-    estResponsable: [false],
-  });
+ 
 
   constructor(
     private route: ActivatedRoute,
@@ -57,7 +37,29 @@ export class EnregSessionComponent implements OnInit {
     const sessionId: number = tmp;
     this.sessionService.getSession(sessionId).subscribe((result) => {
       this.session = result;
-    });
+    }); 
+    this.utilisateurForm = this.formBuilder.group({
+    nom: ['', [Validators.minLength(2), Validators.required]],
+    prenom: ['', [Validators.minLength(2), Validators.required]],
+    email: ['', [Validators.email, Validators.required]],
+    telephone: ['', [Validators.minLength(10), Validators.required]],
+    adresse: this.formBuilder.group({
+      numero: ['', [Validators.minLength(1), Validators.required]],
+      rue: ['', [Validators.minLength(2), Validators.required]],
+      complement: [''],
+      codePostal: ['', [Validators.minLength(5), Validators.required]],
+      ville: ['', [Validators.minLength(2), Validators.required]],
+    }),
+    fonctionResponsable: [''],
+    serviceAssocie: [''],
+    nomEntreprise: [''],
+    session: [this.session],
+    experience: [''],
+    noteFormateur: [''],
+    estClient: [true],
+    estFormateur: [false],
+    estResponsable: [false],
+  });
     this.soumis = false;
   }
 
@@ -76,20 +78,25 @@ export class EnregSessionComponent implements OnInit {
     }
   }
 
-  enregUtilisateur(): void{
-    this.utilisateur=this.utilisateurForm.value;
+  enregUtilisateur(): void {
+   this.utilisateurForm.value.session=this.session;
+    this.utilisateur = this.utilisateurForm.value;
   }
 
   onSubmit(): void {
-    if (this.enregAdresse()) {
       this.enregUtilisateur();
       console.log(this.utilisateur);
-      if (this.utilisateurService.createUtilisateur(this.utilisateur).subscribe((data) => { console.log(data) })) { 
-        console.log(this.utilisateurForm.value);
-        console.log("utilisateur créé!") }
+      if (this.utilisateurService.createUtilisateur(this.utilisateur).subscribe({
+        next: () => {
+          this.router.navigate(["/home"]);
+        }
+      }))
+      {
+
+        console.log("utilisateur créé!")
+      }
       else console.log("utilisateur a fait plouf!")
-    }
-    else console.log("adresse pas créée");
+    this.soumis=true;
   }
 
 }
