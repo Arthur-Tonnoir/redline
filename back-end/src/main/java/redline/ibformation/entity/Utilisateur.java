@@ -18,21 +18,21 @@ public class Utilisateur {
     private String email;
     @Column(name = "telephone")
     private String telephone;
-    @ManyToOne
+    @ManyToOne//(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "adresse_id")
     private Adresse adresse;
 
     //Pour le responsable on donne sa fonction et le service auquel il est associé
     @Column(name = "fonction")
     private String fonctionResponsable;
-    @ManyToOne
+    @ManyToOne//(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "service_id")
     private Service serviceAssocie;
 
     //Pour le client on donne le nom de l'entreprise pour laquelle il travaille  et la session à laquelle il est inscrit
     @Column(name = "nom_entreprise")
     private String nomEntreprise;
-    @ManyToOne
+    @ManyToOne//(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "session_id")
     private Session session;
 

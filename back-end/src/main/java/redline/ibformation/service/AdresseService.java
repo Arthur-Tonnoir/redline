@@ -25,7 +25,7 @@ public class AdresseService {
 
     /**
      * Methode permettant de trouver l'adresse grace à son id
-     * @param id
+     * @param id id
      * @return Adresse
      */
     public Adresse findById(Long id){
@@ -39,17 +39,20 @@ public class AdresseService {
 
     /**
      * Methode permettant de créer une nouvelle adresse
-     * @param adresse
+     * @param  adresse Adresse
      * @return Adresse
      */
     public Adresse create(Adresse adresse) {
-        return this.adresseDao.save(adresse);
+       // if(this.adresseDao.existsById(adresse.getId()))
+       // { return adresse;}
+       // else
+            return this.adresseDao.save(adresse);
     }
 
     /**
      * Methode qui permet de mettre à jour l'adresse dans la table adresse
      * et qui renvoie une erreur si l'adresse est introuvable
-     * @param adresse
+     * @param adresse Adresse
      * @return Adresse
      */
     public Adresse update(Adresse adresse) {
@@ -62,7 +65,7 @@ public class AdresseService {
 
     /**
      * supprime une adresse par son id
-     * @param id
+     * @param id id
      */
     public void delete(Long id) {
         if (!this.adresseDao.existsById(id)) {

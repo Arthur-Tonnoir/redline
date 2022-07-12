@@ -1,9 +1,8 @@
 package redline.ibformation.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Adresse {
@@ -20,6 +19,8 @@ public class Adresse {
     private Long codePostal;
     @Column(name = "ville")
     private String ville;
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    private List<Utilisateur> utilisateurList=new ArrayList<>();
 
     //Costructeurs (vide, sans id, avec id)
 
