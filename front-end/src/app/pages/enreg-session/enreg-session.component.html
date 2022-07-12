@@ -79,13 +79,14 @@
     </div>
 
     <div class="mb-3">
-      <label for="entreprise"
+      <label for="nomEntreprise"
         >Entreprise : <span class="text-muted">(Optional)</span></label
       >
       <input
-        type="entreprise"
+        type="text"
         class="form-control"
         placeholder="Ex. Google"
+        formControlName="nomEntreprise"
       />
     </div>
     <h1 class="sous-title">Adresse</h1>
@@ -130,6 +131,7 @@
           type="text"
           class="form-control"
           placeholder="Ex. appartement n°B23"
+          formControlName="complement"
         />
 
       </div>
@@ -167,16 +169,9 @@
         </div>
       </div>
     </ng-container>
-
-    <!-- <span  *ngIf="utilisateurForm.invalid">
-  <button class="btn-validation-formulaire" type="submit" disable()>
-      Valider
-    </button></span>
-    <span  *ngIf="!utilisateurForm.invalid"> -->
-      <button class="btn-validation-formulaire" type="submit">
+      <button class="btn-validation-formulaire" [disabled]="utilisateurForm.invalid"  type="submit">
           Valider
         </button>
-      <!-- </span> -->
 </form>
   </div>
 </div>

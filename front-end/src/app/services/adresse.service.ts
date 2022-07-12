@@ -13,14 +13,14 @@ export class AdresseService {
   constructor(private httpClient: HttpClient) { }
 
   getAdresses(): Observable<Adresse[]>{
-    return this.httpClient.get<Adresse[]>(`${this.apiUrl}/Adresses`);
+    return this.httpClient.get<Adresse[]>(`${this.apiUrl}/Adresse`);
   }
 
   getAdresse(id: number): Observable<Adresse[]> {
-    return this.httpClient.get<Adresse[]>(`${this.apiUrl}/Adresses/${id}`);
+    return this.httpClient.get<Adresse[]>(`${this.apiUrl}/Adresse/${id}`);
   }
 
   createAdresse(adresse: Adresse): Observable<Adresse>{
-    return this.httpClient.post<Adresse>(this.apiUrl+'/Adresses',adresse);
+    return this.httpClient.post<Adresse>(`${this.apiUrl}/Adresse`,adresse);
   }
 }

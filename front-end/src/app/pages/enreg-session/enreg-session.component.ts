@@ -5,7 +5,9 @@ import Session from 'src/app/models/session.model';
 import Utilisateur from 'src/app/models/utilisateur.model';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 import { SessionService } from 'src/app/services/session.service';
-import { first } from 'rxjs';
+import { AdresseService } from 'src/app/services/adresse.service';
+import Adresse from 'src/app/models/adresse.model';
+
 @Component({
   selector: 'app-enreg-session',
   templateUrl: './enreg-session.component.html',
@@ -14,6 +16,8 @@ import { first } from 'rxjs';
 export class EnregSessionComponent implements OnInit {
   session!: Session;
   utilisateur!: Utilisateur;
+  adresseClient!: Adresse;
+  id_adresse!:number;
 
   soumis: boolean = false;
   utilisateurForm: FormGroup = this.formBuilder.group({
@@ -31,7 +35,7 @@ export class EnregSessionComponent implements OnInit {
     fonctionResponsable: [''],
     serviceAssocie: [''],
     nomEntreprise: [''],
-    session: [this.session],
+    session: [''],
     experience: [''],
     noteFormateur: [''],
     estClient: [true],
@@ -44,8 +48,9 @@ export class EnregSessionComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private utilisateurService: UtilisateurService,
+    private adresseService: AdresseService,
     private sessionService: SessionService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const tmp = this.route.snapshot.params['id'];
@@ -60,12 +65,31 @@ export class EnregSessionComponent implements OnInit {
     return this.utilisateurForm.controls;
   }
 
-  onSubmit(): void {
-    if (this.utilisateurForm.invalid) {
-      console.log('le formulaire a fait ploufffff!');
-    } else
-      {
-        console.log('le formulaire yeahhhh!');
-        this.utilisateurService.createUtilisateur(this.utilisateurForm.value).subscribe((data)=>{console.log(data)});}
+  enregAdresse(): boolean {
+    this.adresseClient = this.utilisateurForm.get('adresse')?.value;
+
+    if (this.adresseService.createAdresse(this.adresseClient).subscribe((data) => { console.log(data) })) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
+
+  enregUtilisateur(): void{
+    this.utilisateur=this.utilisateurForm.value;
+  }
+
+  onSubmit(): void {
+    if (this.enregAdresse()) {
+      this.enregUtilisateur();
+      console.log(this.utilisateur);
+      if (this.utilisateurService.createUtilisateur(this.utilisateur).subscribe((data) => { console.log(data) })) { 
+        console.log(this.utilisateurForm.value);
+        console.log("utilisateur créé!") }
+      else console.log("utilisateur a fait plouf!")
+    }
+    else console.log("adresse pas créée");
+  }
+
 }

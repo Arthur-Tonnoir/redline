@@ -21,6 +21,6 @@ export class UtilisateurService {
   }
 
   createUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur>{
-    return this.httpClient.post<Utilisateur>(this.apiUrl+'/Utilisateur',utilisateur);
+    return this.httpClient.post<Utilisateur>(`${this.apiUrl}/Utilisateur`,utilisateur);
   }
 }
