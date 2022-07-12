@@ -70,7 +70,7 @@ public class UtilisateurController {
         return this.utilisateurService.create(utilisateur);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Utilisateur update(@RequestBody Utilisateur utilisateur, @PathVariable Long id) {
         if (!id.equals(utilisateur.getId())){

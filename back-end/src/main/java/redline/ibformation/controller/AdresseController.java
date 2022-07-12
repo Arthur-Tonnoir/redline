@@ -33,7 +33,7 @@ public class AdresseController {
         return this.adresseService.create(adresse);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Adresse update(@RequestBody Adresse adresse,@PathVariable Long id) {
         if (!id.equals(adresse.getId())){

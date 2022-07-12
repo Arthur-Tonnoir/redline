@@ -36,7 +36,7 @@ public class EvaluationController {
         return this.evaluationService.create(evaluation);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Evaluation update(@RequestBody Evaluation evaluation, @PathVariable Long id) {
         if (!id.equals(evaluation.getId())){

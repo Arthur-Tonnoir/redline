@@ -35,7 +35,7 @@ public class SousThemeController {
         return this.sousThemeService.create(sousTheme);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public SousTheme update(@RequestBody SousTheme sousTheme,@PathVariable Long id) {
         if (!id.equals(sousTheme.getId())){

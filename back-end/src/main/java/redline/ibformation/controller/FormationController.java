@@ -35,7 +35,7 @@ public class FormationController {
         return this.formationService.create(formation);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Formation update(@RequestBody Formation formation, @PathVariable Long id) {
         if (!id.equals(formation.getId())){
