@@ -5,12 +5,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import redline.ibformation.entity.Evaluation;
-import redline.ibformation.entity.Session;
 import redline.ibformation.service.EvaluationService;
-import redline.ibformation.service.SessionService;
+
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Evaluation")
 public class EvaluationController {
@@ -36,7 +36,7 @@ public class EvaluationController {
         return this.evaluationService.create(evaluation);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Evaluation update(@RequestBody Evaluation evaluation, @PathVariable Long id) {
         if (!id.equals(evaluation.getId())){
