@@ -3,8 +3,8 @@ import Formation from "./formation.model";
 export default interface Session{
   id: number;
   lieuFormation: string;
-  dateDebut: Date;
-  dateFin: Date;
-  type: string;
-  idFormation: Formation;
+  debutSession: Date;
+  finSession: Date;
+  typeSession: string;
+  formation: Formation;
 }

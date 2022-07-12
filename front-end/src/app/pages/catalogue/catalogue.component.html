@@ -1,8 +1,8 @@
 
 <div class="frame-catalogue-formation">
   <h1>Catalogue Formation</h1>
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
+  <div class="accordion" id="accordionExample" *ngFor="let domain of domaines">
+    <div class="accordion-item" >
       <h2 class="accordion-header" id="headingOne">
         <button
           class="accordion-button"
@@ -12,7 +12,7 @@
           aria-expanded="true"
           aria-controls="collapseOne"
         >
-         <h3>Domain #1</h3>
+        {{domain.nomDomaine}}
         </button>
       </h2>
       <div
@@ -20,202 +20,11 @@
         class="accordion-collapse collapse show"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          <a routerLink="/listformation"
-            ><ul>
-              Theme N
-            </ul></a
-          >
-          <a routerLink="/listformation"
-            ><ul>
-              Theme N
-            </ul></a
-          >
-          <a routerLink="/listformation"
-            ><ul>
-              Theme N
-            </ul></a
-          >
-          <a routerLink="/listformation"
-            ><ul>
-              Theme N
-            </ul></a
-          >
-          <a routerLink="/listformation"
-            ><ul>
-              Theme N
-            </ul></a
-          >
-          <a routerLink="/listformation"
-            ><ul>
-              Theme N
-            </ul></a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseTwo"
-          aria-expanded="true"
-          aria-controls="collapseTwo"
-        >
-        <h3>Domain #2</h3>
-        </button>
-      </h2>
-      <div
-        id="collapseTwo"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingTwo"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseThree"
-          aria-expanded="false"
-          aria-controls="collapseThree"
-        >
-        <h3>Domain #3</h3>
-        </button>
-      </h2>
-      <div
-        id="collapseThree"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingThree"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFour">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseFour"
-          aria-expanded="false"
-          aria-controls="collapseFour"
-        >
-        <h3>Domain #4</h3>
-        </button>
-      </h2>
-      <div
-        id="collapseFour"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingFour"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFive">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseFive"
-          aria-expanded="false"
-          aria-controls="collapseFive"
-        >
-        <h3>Domain #5</h3>
-        </button>
-      </h2>
-      <div
-        id="collapseFive"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingFive"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
-          <ul>
-            Theme N
-          </ul>
+        *ngFor="let theme of themes">
+        <div class="accordion-body" *ngIf="theme.domaineFormation.id == domain.id">
+          <a routerLink="/listformation/{{theme.id}}">
+            {{theme.nomTheme}}
+          </a>
         </div>
       </div>
     </div>

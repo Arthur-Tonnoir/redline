@@ -11,7 +11,7 @@ export default interface Utilisateur{
   fonctionResponsable: string;
   serviceAssocie: string;
   nomEntreprise: string;
-  idSession: number;
+  session: Session;
   experience: number;
   noteFormateur: number;
   estClient: boolean;

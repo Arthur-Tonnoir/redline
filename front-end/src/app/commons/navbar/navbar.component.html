@@ -30,7 +30,7 @@
             <div *ngFor="let theme of themes">
               <ul class="list-unstyled" *ngIf="domaine.id == theme.domaineFormation.id">
                 <li>
-                  <a href="#" >{{theme.nomTheme}}</a>
+                  <a href="#" routerLink="/listformation/{{theme.id}}">{{theme.nomTheme}}</a>
                 </li>
               </ul>
             </div>

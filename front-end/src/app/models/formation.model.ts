@@ -1,6 +1,6 @@
 export default interface Formation{
     id: number;
-    nom: string;
+    nomFormation: string;
     contenu: number;
-    prix: number;
+    prixFormation: number;
 }

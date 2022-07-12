@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'catalogue', component:CatalogueComponent},
   {path: 'detailformation/:id', component:DetailFormationComponent},
-  {path: 'listformation', component:ListFormationComponent},
-  {path: 'enregsession',component:EnregSessionComponent},
+  {path: 'listformation/:id', component:ListFormationComponent},
+  {path: 'enregsession/:id',component:EnregSessionComponent},
   {path: 'contact', component:ContactComponent},
   {path: 'espaceclient', component:EspaceClientComponent},
   {path: '**', component:NotfoundComponent}];
