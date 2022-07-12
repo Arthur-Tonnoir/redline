@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import redline.ibformation.entity.SousTheme;
 import redline.ibformation.service.SousThemeService;
-import redline.ibformation.service.SousThemeService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/SousTheme")
 public class SousThemeController {

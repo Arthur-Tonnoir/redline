@@ -9,6 +9,7 @@ import redline.ibformation.service.UtilisateurService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Utilisateur")
 public class UtilisateurController {

@@ -8,6 +8,8 @@ import redline.ibformation.entity.Service;
 import redline.ibformation.service.ServiceService;
 
 import java.util.List;
+
+@CrossOrigin()
 @RestController
 @RequestMapping("/Service")
 public class ServiceController {

@@ -9,6 +9,7 @@ import redline.ibformation.service.SessionService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Session")
 public class SessionController {

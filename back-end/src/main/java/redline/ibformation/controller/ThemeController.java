@@ -9,6 +9,7 @@ import redline.ibformation.service.ThemeService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Theme")
 public class ThemeController {

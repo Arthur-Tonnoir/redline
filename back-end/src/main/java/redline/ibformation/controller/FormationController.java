@@ -9,6 +9,7 @@ import redline.ibformation.service.FormationService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Formation")
 public class FormationController {

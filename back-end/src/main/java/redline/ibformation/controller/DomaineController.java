@@ -9,6 +9,7 @@ import redline.ibformation.service.DomaineService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Domaine")
 public class DomaineController {
