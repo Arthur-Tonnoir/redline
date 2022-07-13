@@ -7,7 +7,7 @@
       <div class="col-sm-4"></div>
       <div class="col-sm-4">
         <div class="alert alert-info alert-dismissible">
-          <button type="button" class="close" data-dismiss="alert"><span class="material-icons">delete</span><h4><strong>L'utilisateur est supprime</strong></h4></button>
+          <button type="button" class="close" data-dismiss="alert"><span class="material-icons">delete</span><h4><strong>L'utilisateur a été supprimé</strong></h4></button>
 
         </div>
       </div>
@@ -41,7 +41,7 @@
               id="delete-btn"
               class="btn"
             >
-              <i class="fa fa-futboll-0">Delete</i>
+              <i class="fa fa-futboll-0">Supprimer</i>
             </button>
             <button
               (click)="updateUtilisateur(utilisateur.id)"
@@ -51,7 +51,7 @@
               data-bs-target="#myModal"
 
             >
-              Mise a jour
+              Mettre à jour
             </button>
           </td>
         </tr>
@@ -70,7 +70,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title" style="text-align: center">
-            Mise a jour utilisateur
+            Mise à jour de l'utilisateur
           </h4>
         </div>
 
@@ -81,12 +81,12 @@
               <input type="hidden" class="form-control" formControlName="id" />
 
               <div class="form-group">
-                <label for="nom">Utilisateur Nom</label>
+                <label for="nom">Nom utilisateur</label>
                 <input type="text" class="form-control" formControlName="nom" />
               </div>
 
               <div class="form-group">
-                <label for="prenom">Utilisateur Prenom</label>
+                <label for="prenom">Prénom utilisateur </label>
                 <input
                   type="text"
                   class="form-control"
@@ -95,7 +95,7 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Utilisateur Email</label>
+                <label for="email">Email utilisateur</label>
                 <input
                   type="text"
                   class="form-control"
@@ -105,14 +105,14 @@
             </div>
           </div>
           <div [hidden]="!isupdated">
-            <h4>Les detailes sont mises a jour!</h4>
+            <h4>Les détails sont mis a jour!</h4>
           </div>
         </div>
 
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="submit" id="update-btn-2" class="btn" [hidden]="isupdated" data-bs-dismiss="modal">
-            Mise a jour
+            Valider
           </button>
           <button
             type="button"
@@ -120,7 +120,7 @@
             data-bs-dismiss="modal"
             (click)="changeisUpdate()"
           >
-            Ferme
+            Annuler
           </button>
         </div>
       </form>
