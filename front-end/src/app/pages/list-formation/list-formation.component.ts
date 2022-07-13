@@ -16,18 +16,21 @@ export class ListFormationComponent implements OnInit {
 
   sousthemes: SousTheme[] = [];
 
+  id!: number;
+
   constructor(private st: SousThemeService, private th: ThemeService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 
-    const tmp = this.route.snapshot.paramMap.get('id');
+    const tmp = this.route.params.subscribe((params) => {
+      this.id = params["id"];
+      this.initThemes()
+    });
 
-    const id: number = Number(tmp);
+  }
 
-    if (id)
-    {
-      this.th.getTheme((id)).subscribe((theme) => {this.theme = theme});
-    }
+  initThemes() {
+    this.th.getTheme(this.id).subscribe((theme) => {this.theme = theme});
 
     this.st.getSousThemes().subscribe((soustheme) => {this.sousthemes = soustheme});
   }
