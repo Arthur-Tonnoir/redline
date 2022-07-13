@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+
+<div class="dashboard-frame">
+  <h1>Dashboard</h1>
+  <div  class="container-fluid">
+  <nav class="navbar navbar-expand-sm">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a routerLink="view-utilisateur" class="nav-link" class="btn" role="button" >View Utilisateur</a>
+        </li>
+        <li class="nav-item">
+          <a  routerLink="add-utilisateur" class="nav-link" class="btn" role="button" >Add utilisateur</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
+
