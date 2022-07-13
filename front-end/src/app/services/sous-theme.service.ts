@@ -19,4 +19,16 @@ export class SousThemeService {
   getSousTheme(id: number): Observable<SousTheme>{
     return this.httpClient.get<SousTheme>(`${this.apiUrl}/SousTheme/${id}`);
   }
+
+  createSousTheme(soustheme: SousTheme): Observable<SousTheme> {
+    return this.httpClient.post<SousTheme>(`${this.apiUrl}/SousTheme`, soustheme);
+  }
+
+  updateSousTheme(soustheme: SousTheme): Observable<SousTheme> {
+    return this.httpClient.put<SousTheme>(`${this.apiUrl}/SousTheme/${soustheme.id}`, soustheme);
+  }
+
+  deleteSousTheme(soustheme: SousTheme): Observable<SousTheme> {
+    return this.httpClient.delete<SousTheme>(`${this.apiUrl}/SousTheme/${soustheme.id}`);
+  }
 }

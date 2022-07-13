@@ -81,7 +81,7 @@
         <ul>
           <h4>Détails</h4>
           <li><h6>Durée</h6></li>
-          <li><h6>Prix</h6>{{formation.prixFormation}}</li>
+          <li><h6>Prix  {{formation.prixFormation}} €</h6></li>
         </ul>
       </section>
 
@@ -89,9 +89,10 @@
       <h3>Liste des sessions disponibles</h3>
 
       <div class="session-info" *ngIf="listSession.length > 0">
-        <section *ngFor="let session of listSession">
-          <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">{{session.debutSession | date: 'shortDate'}} au {{session.finSession | date: 'shortDate'}} a {{session.lieuFormation}}</mat-radio-button>
+
+        <section>
+          <mat-radio-group aria-label="Select an option" onload="getDate(session.id)" >
+            <mat-radio-button  *ngFor="let session of listSession" [value]="session.id">{{session.debutSession | date: 'shortDate'}} au {{session.finSession | date: 'shortDate'}} a {{session.lieuFormation}}</mat-radio-button>
           </mat-radio-group>
           <button class="btn btn-lg" routerLink="/enregsession/{{session.id}}">Inscrivez-vous</button>
         </section>

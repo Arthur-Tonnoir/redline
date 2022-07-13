@@ -19,4 +19,16 @@ export class FormationService {
   getFormation(id: number): Observable<Formation>{
     return this.httpClient.get<Formation>(`${this.apiUrl}/Formation/${id}`);
   }
+
+  createFormation(formation: Formation): Observable<Formation> {
+    return this.httpClient.post<Formation>(`${this.apiUrl}/Formation`, formation);
+  }
+
+  updateFormation(formation: Formation): Observable<Formation> {
+    return this.httpClient.put<Formation>(`${this.apiUrl}/Formation/${formation.id}`, formation);
+  }
+
+  deleteFormation(formation: Formation): Observable<Formation> {
+    return this.httpClient.delete<Formation>(`${this.apiUrl}/Formation/${formation.id}`);
+  }
 }

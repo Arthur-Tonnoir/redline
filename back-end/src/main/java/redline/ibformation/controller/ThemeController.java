@@ -9,6 +9,7 @@ import redline.ibformation.service.ThemeService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Theme")
 public class ThemeController {
@@ -34,7 +35,7 @@ public class ThemeController {
         return this.themeService.create(theme);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Theme update(@RequestBody Theme theme, @PathVariable Long id) {
         if (!id.equals(theme.getId())){

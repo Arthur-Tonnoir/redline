@@ -9,6 +9,7 @@ import redline.ibformation.service.DomaineService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Domaine")
 public class DomaineController {
@@ -34,7 +35,7 @@ public class DomaineController {
         return this.domaineService.create(domaine);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Domaine update(@RequestBody Domaine domaine,@PathVariable Long id) {
         if (!id.equals(domaine.getId())){
