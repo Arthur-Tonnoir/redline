@@ -24,7 +24,6 @@
           placeholder="Ex. Dutrouc"
           formControlName="nom"
         />
-
         <span *ngIf="soumis && formUtilisateur['nom'].invalid">
           <span *ngIf="formUtilisateur['nom'].hasError('minLenght')">
             * Le nom doit contenir au moins 2 caractères
@@ -40,7 +39,6 @@
           placeholder="Ex. Paul"
           formControlName="prenom"
         />
-
         <span *ngIf="soumis && formUtilisateur['prenom'].invalid">
           <span *ngIf="formUtilisateur['prenom'].hasError('minLenght')">
             * Le prénom doit contenir au moins 2 caractères

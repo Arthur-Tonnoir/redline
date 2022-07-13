@@ -2,6 +2,7 @@ package redline.ibformation.entity;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 public class Session {
@@ -19,6 +20,9 @@ public class Session {
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "formation_id")
     private Formation formation;
+
+   // @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+   // private List<Utilisateur> utilisateurList;
 
     //Constructeurs
     public Session() {

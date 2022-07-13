@@ -20,7 +20,6 @@ export class EnregSessionComponent implements OnInit {
   id_adresse!:number;
 
   soumis: boolean = false;
-
   utilisateurForm: FormGroup;
   adresseForm: FormGroup;
 
@@ -98,20 +97,18 @@ export class EnregSessionComponent implements OnInit {
       return false;
     }
   }
-
   enregUtilisateur(): void{
     this.utilisateur=this.utilisateurForm.value;
     this.utilisateur.session = this.session;
   }
 
   onSubmit(): void {
-    if (this.enregAdresse()) {
+    if(this.enregAdresse()){
       this.enregUtilisateur();
       this.utilisateurService.createUtilisateur(this.utilisateur);
     }
     this.adresseForm.reset();
     this.utilisateurForm.reset();
-
   }
 
 }
