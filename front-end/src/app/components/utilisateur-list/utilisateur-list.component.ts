@@ -52,7 +52,7 @@ export class UtilisateurListComponent implements OnInit {
         processing: true
     }
 
-      this.utilisateurservice.getUtilisateurList().subscribe((data) =>{
+      this.utilisateurservice.getUtilisateurs().subscribe((data) =>{
       this.utilisateurs = data;
       this.dtTrigger.next(data);
 
@@ -65,7 +65,7 @@ export class UtilisateurListComponent implements OnInit {
         next: (data) => {
           console.log(data);
           this.deleteMessage=true;
-          this.utilisateurservice.getUtilisateurList().subscribe(data =>{
+          this.utilisateurservice.getUtilisateurs().subscribe(data =>{
             this.utilisateurs =data
             })
         },

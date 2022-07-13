@@ -29,13 +29,11 @@ export class UtilisateurService {
   createUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur> {
     return this.httpClient.post<Utilisateur>(`${this.apiUrl}/Utilisateur`, utilisateur);
   }
-  //id id: number
+
   deleteUtilisateur(id: number): Observable<Utilisateur> {
     return this.httpClient.delete<Utilisateur>(`${this.apiUrl}/Utilisateur/${id}`);
   }
 
-  
-  //put not post  //id id: number
   updateUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur> {
     return this.httpClient.put<Utilisateur>(`${this.apiUrl}/Utilisateur/${utilisateur.id}`, utilisateur);
   }
