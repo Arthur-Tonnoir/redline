@@ -9,6 +9,7 @@ import redline.ibformation.service.SessionService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Session")
 public class SessionController {
@@ -34,7 +35,7 @@ public class SessionController {
         return this.sessionService.create(session);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Session update(@RequestBody Session session, @PathVariable Long id) {
         if (!id.equals(session.getId())){

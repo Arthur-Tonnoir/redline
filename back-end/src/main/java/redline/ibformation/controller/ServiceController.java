@@ -8,6 +8,8 @@ import redline.ibformation.entity.Service;
 import redline.ibformation.service.ServiceService;
 
 import java.util.List;
+
+@CrossOrigin()
 @RestController
 @RequestMapping("/Service")
 public class ServiceController {
@@ -33,7 +35,7 @@ public class ServiceController {
         return this.serviceService.create(service);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Service update(@RequestBody Service service, @PathVariable Long id) {
         if (!id.equals(service.getId())){
