@@ -18,14 +18,14 @@ public class Utilisateur {
     private String email;
     @Column(name = "telephone")
     private String telephone;
-    @ManyToOne//(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "adresse_id")
     private Adresse adresse;
 
     //Pour le responsable on donne sa fonction et le service auquel il est associé
     @Column(name = "fonction")
     private String fonctionResponsable;
-    @ManyToOne//(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "service_id")
     private Service serviceAssocie;
 

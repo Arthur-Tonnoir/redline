@@ -16,8 +16,8 @@ export class AdresseService {
     return this.httpClient.get<Adresse[]>(`${this.apiUrl}/Adresse`);
   }
 
-  getAdresse(id: number): Observable<Adresse[]> {
-    return this.httpClient.get<Adresse[]>(`${this.apiUrl}/Adresse/${id}`);
+  getAdresse(id: number): Observable<Adresse> {
+    return this.httpClient.get<Adresse>(`${this.apiUrl}/Adresse/${id}`);
   }
 
   createAdresse(adresse: Adresse): Observable<Adresse>{

@@ -8,6 +8,7 @@ import redline.ibformation.entity.Adresse;
 import redline.ibformation.service.AdresseService;
 
 import java.util.List;
+
 @CrossOrigin()
 @RestController
 @RequestMapping("/Adresse")

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import Utilisateur from '../models/utilisateur.model';
 
 @Injectable({
@@ -16,8 +16,8 @@ export class UtilisateurService {
     return this.httpClient.get<Utilisateur[]>(`${this.apiUrl}/Utilisateur`);
   }
 
-  getUtilisateur(id: number): Observable<Utilisateur[]> {
-    return this.httpClient.get<Utilisateur[]>(`${this.apiUrl}/Utilisateur/${id}`);
+  getUtilisateur(id: number): Observable<Utilisateur> {
+    return this.httpClient.get<Utilisateur>(`${this.apiUrl}/Utilisateur/${id}`);
   }
 
   createUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur>{

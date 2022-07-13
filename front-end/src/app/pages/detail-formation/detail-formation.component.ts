@@ -20,6 +20,8 @@ export class DetailFormationComponent implements OnInit {
 
   dateDebut!: Date;
 
+  selectedSessionId!: number;
+
   constructor(private route: ActivatedRoute, private router: Router, private formationService: FormationService, private sessionService: SessionService) { }
 
   ngOnInit(): void {
@@ -37,8 +39,12 @@ export class DetailFormationComponent implements OnInit {
           this.listSession.push(session);
         }
       })
-});
+    });
 
+  }
+
+  goToSession(): number {
+    return this.selectedSessionId;
   }
 
 }
