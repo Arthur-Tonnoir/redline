@@ -1,6 +1,8 @@
-import { Injectable } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { catchError, Observable, throwError } from 'rxjs';
+
 import Utilisateur from '../models/utilisateur.model';
 
 @Injectable({
@@ -8,32 +10,35 @@ import Utilisateur from '../models/utilisateur.model';
 })
 export class UtilisateurService {
 
-  private baseUrl = 'http://localhost:8080';
+
+  private apiUrl = 'http://localhost:8080';
 
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
 
 
-  getUtilisateurList(): Observable<Utilisateur[]> {
-    return this.http.get<Utilisateur[]>(`${this.baseUrl}/Utilisateur`);
-  }
-
-  createUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur> {
-    return this.http.post<Utilisateur>(`${this.baseUrl}/Utilisateur`, utilisateur);
-  }
-  //id id: number
-  deleteUtilisateur(id: number): Observable<Utilisateur> {
-    return this.http.delete<Utilisateur>(`${this.baseUrl}/Utilisateur/${id}`);
+  getUtilisateurs(): Observable<Utilisateur[]> {
+    return this.httpClient.get<Utilisateur[]>(`${this.apiUrl}/Utilisateur`);
   }
 
   getUtilisateur(id: number): Observable<Utilisateur> {
-    return this.http.get<Utilisateur>(`${this.baseUrl}/Utilisateur/${id}`);
+    return this.httpClient.get<Utilisateur>(`${this.apiUrl}/Utilisateur/${id}`);
   }
+  createUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur> {
+    return this.httpClient.post<Utilisateur>(`${this.apiUrl}/Utilisateur`, utilisateur);
+  }
+  //id id: number
+  deleteUtilisateur(id: number): Observable<Utilisateur> {
+    return this.httpClient.delete<Utilisateur>(`${this.apiUrl}/Utilisateur/${id}`);
+  }
+
+  
   //put not post  //id id: number
   updateUtilisateur(utilisateur: Utilisateur): Observable<Utilisateur> {
-    return this.http.put<Utilisateur>(`${this.baseUrl}/Utilisateur/${utilisateur.id}`, utilisateur);
+    return this.httpClient.put<Utilisateur>(`${this.apiUrl}/Utilisateur/${utilisateur.id}`, utilisateur);
   }
+
 
 }

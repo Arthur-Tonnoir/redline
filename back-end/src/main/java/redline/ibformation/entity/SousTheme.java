@@ -14,10 +14,10 @@ public class SousTheme {
     private Long id;
     @Column(name = "nom_soustheme")
     private String nomSousTheme;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "theme_id")
     private Theme theme;
-    @ManyToMany
+    @ManyToMany//(cascade = CascadeType.ALL)
     @JoinTable(name = "soustheme_formation", joinColumns = @JoinColumn(name = "soustheme_id"), inverseJoinColumns = @JoinColumn(name = "formation_id"))
     private List<Formation> listFormation;
     //voir si on doit utiliser set formation ou une seule formation
