@@ -28,6 +28,9 @@ import { TestPrerequisComponent } from './pages/test-prerequis/test-prerequis.co
 import { TestValidationComponent } from './pages/test-validation/test-validation.component';
 import { DevisFormPersonaliseComponent } from './pages/devis-form-personalise/devis-form-personalise.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { UtilisateurAddComponent } from './components/utilisateur-add/utilisateur-add.component';
+import { UtilisateurListComponent } from './components/utilisateur-list/utilisateur-list.component';
 
 
 @NgModule({
@@ -46,7 +49,10 @@ import { ContactComponent } from './pages/contact/contact.component';
     TestPrerequisComponent,
     TestValidationComponent,
     DevisFormPersonaliseComponent,
-    ContactComponent
+    ContactComponent,
+    DashboardComponent,
+    UtilisateurAddComponent,
+    UtilisateurListComponent
   ],
   imports: [
     BrowserModule,
