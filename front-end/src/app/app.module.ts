@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { HttpClientModule} from '@angular/common/http'
-
+import { HttpClientModule } from '@angular/common/http'
+import { DataTablesModule } from 'angular-datatables';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './commons/navbar/navbar.component';
@@ -28,6 +27,9 @@ import { TestPrerequisComponent } from './pages/test-prerequis/test-prerequis.co
 import { TestValidationComponent } from './pages/test-validation/test-validation.component';
 import { DevisFormPersonaliseComponent } from './pages/devis-form-personalise/devis-form-personalise.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { UtilisateurAddComponent } from './components/utilisateur-add/utilisateur-add.component';
+import { UtilisateurListComponent } from './components/utilisateur-list/utilisateur-list.component';
 
 
 @NgModule({
@@ -46,7 +48,10 @@ import { ContactComponent } from './pages/contact/contact.component';
     TestPrerequisComponent,
     TestValidationComponent,
     DevisFormPersonaliseComponent,
-    ContactComponent
+    ContactComponent,
+    DashboardComponent,
+    UtilisateurAddComponent,
+    UtilisateurListComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatFormFieldModule,
     MatRadioModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DataTablesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
