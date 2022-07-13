@@ -9,7 +9,7 @@ public class Theme {
     private Long id;
     @Column(name = "nom_theme")
     private String nomTheme;
-    @ManyToOne
+    @ManyToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "domaine_id")
     private Domaine domaineFormation;
 
