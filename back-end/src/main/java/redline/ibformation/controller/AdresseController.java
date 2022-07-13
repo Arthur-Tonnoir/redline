@@ -9,6 +9,7 @@ import redline.ibformation.service.AdresseService;
 
 import java.util.List;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/Adresse")
 public class AdresseController {
@@ -33,7 +34,7 @@ public class AdresseController {
         return this.adresseService.create(adresse);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Adresse update(@RequestBody Adresse adresse,@PathVariable Long id) {
         if (!id.equals(adresse.getId())){

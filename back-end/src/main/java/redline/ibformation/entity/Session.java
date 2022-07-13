@@ -16,7 +16,7 @@ public class Session {
     private Date finSession;
     @Column(name = "type_session")
     private String typeSession;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "formation_id")
     private Formation formation;
 

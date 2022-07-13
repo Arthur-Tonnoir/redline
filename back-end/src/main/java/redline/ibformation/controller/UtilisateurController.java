@@ -8,7 +8,7 @@ import redline.ibformation.entity.Utilisateur;
 import redline.ibformation.service.UtilisateurService;
 
 import java.util.List;
-
+@CrossOrigin()
 @RestController
 @RequestMapping("/Utilisateur")
 public class UtilisateurController {
@@ -69,7 +69,7 @@ public class UtilisateurController {
         return this.utilisateurService.create(utilisateur);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
     public Utilisateur update(@RequestBody Utilisateur utilisateur, @PathVariable Long id) {
         if (!id.equals(utilisateur.getId())){

@@ -7,7 +7,7 @@ export default interface Utilisateur{
   prenom: string;
   email: string;
   telephone: string;
-  id_adresse: Adresse;
+  adresse: Adresse;
   fonctionResponsable: string;
   serviceAssocie: string;
   nomEntreprise: string;
