@@ -41,8 +41,4 @@ export class DetailFormationComponent implements OnInit {
 
   }
 
-  protected getDate(id: number): void{
-    this.sessions.find((session) => {if(session.id == id){this.dateDebut = session.debutSession}});
-  }
-
 }

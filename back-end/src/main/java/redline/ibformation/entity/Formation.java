@@ -1,9 +1,7 @@
 package redline.ibformation.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Formation {
@@ -16,7 +14,8 @@ public class Formation {
     private String contenu;
     @Column(name = "prix_formation")
     private Integer prixFormation;
-
+    //@OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+   // private List<Session> sessionList;
     //Constructeurs
     public Formation() {
         super();
