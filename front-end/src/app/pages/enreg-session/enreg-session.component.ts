@@ -97,6 +97,10 @@ export class EnregSessionComponent implements OnInit {
       return false;
     }
   }
+
+  /**
+   * Méthode qui permet de créer un utilisateur à partir des infos du formulaire
+   */
   enregUtilisateur(): void{
     this.utilisateur=this.utilisateurForm.value;
     this.utilisateur.session = this.session;
@@ -105,7 +109,7 @@ export class EnregSessionComponent implements OnInit {
   onSubmit(): void {
     if(this.enregAdresse()){
       this.enregUtilisateur();
-      this.utilisateurService.createUtilisateur(this.utilisateur);
+      this.utilisateurService.createUtilisateur(this.utilisateur).subscribe((data)=>console.log(data));
     }
     this.adresseForm.reset();
     this.utilisateurForm.reset();
