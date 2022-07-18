@@ -7,19 +7,21 @@ import { ThemeService } from 'src/app/services/theme.service';
 @Component({
   selector: 'app-catalogue',
   templateUrl: './catalogue.component.html',
-  styleUrls: ['./catalogue.component.scss']
+  styleUrls: ['./catalogue.component.scss'],
 })
 export class CatalogueComponent implements OnInit {
-
   domaines: Domaine[] = [];
 
-  themes: Theme[]= [];
+  themes: Theme[] = [];
 
-  constructor(private dm : DomaineService, private tm : ThemeService) { }
+  constructor(private dm: DomaineService, private tm: ThemeService) {}
 
   ngOnInit(): void {
-    this.dm.getDomaines().subscribe((domain) => {this.domaines = domain});
-    this.tm.getThemes().subscribe((theme) => {this.themes = theme});
+    this.dm.getDomaines().subscribe((domain) => {
+      this.domaines = domain;
+    });
+    this.tm.getThemes().subscribe((theme) => {
+      this.themes = theme;
+    });
   }
-
 }

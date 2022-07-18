@@ -1,10 +1,9 @@
-
 .frame-list-formation {
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
   width: 90em;
-  min-height : 60em;
+  min-height: 60em;
 }
 
 /*accordion*/
@@ -25,10 +24,9 @@
 .collapsing {
   height: 0;
   overflow: hidden;
-  transition: height .5s;
+  transition: height 0.5s;
 }
 
-button{
+button {
   height: 5em;
 }
-

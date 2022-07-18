@@ -8,20 +8,21 @@ import { ThemeService } from 'src/app/services/theme.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-
-
   domaines: Domaine[] = [];
 
   themes: Theme[] = [];
 
-  constructor(private dm: DomaineService, private th : ThemeService) { }
+  constructor(private dm: DomaineService, private th: ThemeService) {}
 
   ngOnInit(): void {
-    this.dm.getDomaines().subscribe((domaine) => {this.domaines = domaine});
-    this.th.getThemes().subscribe((theme) => {this.themes = theme});
+    this.dm.getDomaines().subscribe((domaine) => {
+      this.domaines = domaine;
+    });
+    this.th.getThemes().subscribe((theme) => {
+      this.themes = theme;
+    });
   }
-
 }

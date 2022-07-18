@@ -1,24 +1,21 @@
-
-.footer{
+.footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 1px;
   height: 15em;
-  background-color:#240c61;
+  background-color: #240c61;
   color: white;
-
 }
 
-.footer div{
+.footer div {
   text-align: center;
   margin-bottom: 0.1em;
 }
-.foot-icon-row{
- display: flex;
- justify-content: space-around;
-
+.foot-icon-row {
+  display: flex;
+  justify-content: space-around;
 }
-li{
+li {
   list-style-type: none;
 }
