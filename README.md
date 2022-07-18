@@ -21,10 +21,15 @@ Le délai fixé par le client est de quatre mois maximum à partir de la soumiss
 - [VScode](https://code.visualstudio.com/)
 
 ## Installation:
-- A venir
+- La base de donnée : le fichier se trouve dans le dossier docs/db le fichier redline_vide.sql c'est la base de donnée vide sans donnée. Pour ceux qui souhaitent voir avec des données utiliser le fichier fixture-redline.sql pour insérer des données
+- Le Back-End les instructions sont [ici](https://github.com/Arthur-Tonnoir/redline/tree/develop/back-end/README.md)
+- le Front-End les instructions sont [ici](https://github.com/Arthur-Tonnoir/redline/tree/develop/README.md)
 
 ## Utilisation:
-- A venir
+- Afficher la liste des formations par son domaine, sont theme et son sou-theme
+- Voir le détail d'une formation 
+- S'enregistrer à une session
+- Afficher, ajouter, modifier et supprimer les utlisateurs via le dashboard
 
 ## Équipe:
 - [Arthur TONNOIR](https://github.com/Arthur-Tonnoir)
