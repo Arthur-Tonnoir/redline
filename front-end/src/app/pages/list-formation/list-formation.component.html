@@ -1,6 +1,10 @@
 <div class="frame-list-formation" *ngIf="theme">
-  <h1>{{theme.nomTheme}}</h1>
-  <div class="accordion" id="accordionExample" *ngFor="let soustheme of sousthemes">
+  <h1>{{ theme.nomTheme }}</h1>
+  <div
+    class="accordion"
+    id="accordionExample"
+    *ngFor="let soustheme of sousthemes"
+  >
     <div class="accordion-item" *ngIf="theme.id == soustheme.theme.id">
       <h2 class="accordion-header" id="headingOne">
         <button
@@ -9,8 +13,9 @@
           data-bs-toggle="collapse"
           data-bs-target="#collapseOne"
           aria-expanded="true"
-          aria-controls="collapseOne">
-        {{soustheme.nomSousTheme}}
+          aria-controls="collapseOne"
+        >
+          {{ soustheme.nomSousTheme }}
         </button>
       </h2>
       <div
@@ -18,10 +23,11 @@
         class="accordion-collapse collapse show"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
-        *ngFor="let formation of soustheme.formations">
+        *ngFor="let formation of soustheme.formations"
+      >
         <div class="accordion-body">
-          <a routerLink="/detailformation/{{formation.id}}">
-              {{formation.nomFormation}}
+          <a routerLink="/detailformation/{{ formation.id }}">
+            {{ formation.nomFormation }}
           </a>
         </div>
       </div>

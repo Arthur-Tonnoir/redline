@@ -10,12 +10,11 @@ public class Formation {
     private Long id;
     @Column(name = "nom_formation")
     private String nomFormation;
-    @Column(name = "contenu")
+    @Column(name = "contenu",length = 65535, columnDefinition = "text")
     private String contenu;
     @Column(name = "prix_formation")
     private Integer prixFormation;
-    //@OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-   // private List<Session> sessionList;
+
     //Constructeurs
     public Formation() {
         super();

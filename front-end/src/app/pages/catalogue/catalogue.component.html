@@ -1,8 +1,7 @@
-
 <div class="frame-catalogue-formation">
   <h1>Catalogue Formation</h1>
   <div class="accordion" id="accordionExample" *ngFor="let domain of domaines">
-    <div class="accordion-item" >
+    <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
         <button
           class="accordion-button"
@@ -12,7 +11,7 @@
           aria-expanded="true"
           aria-controls="collapseOne"
         >
-        {{domain.nomDomaine}}
+          {{ domain.nomDomaine }}
         </button>
       </h2>
       <div
@@ -20,14 +19,17 @@
         class="accordion-collapse collapse show"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
-        *ngFor="let theme of themes">
-        <div class="accordion-body" *ngIf="theme.domaineFormation.id == domain.id">
-          <a routerLink="/listformation/{{theme.id}}">
-            {{theme.nomTheme}}
+        *ngFor="let theme of themes"
+      >
+        <div
+          class="accordion-body"
+          *ngIf="theme.domaineFormation.id == domain.id"
+        >
+          <a routerLink="/listformation/{{ theme.id }}">
+            {{ theme.nomTheme }}
           </a>
         </div>
       </div>
     </div>
   </div>
 </div>
-
