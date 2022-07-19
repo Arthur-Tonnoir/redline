@@ -18,8 +18,8 @@ insert into redline.theme set id=6,nom_theme='Débuter avec la bureautique', dom
 insert into redline.theme set id=7,nom_theme='Réussir son business plan', domaine_id=3;
 insert into redline.theme set id=8,nom_theme='Tous savoir sur la bourse', domaine_id=4;
 
-insert into redline.sous_theme set id=1,nom_soustheme='JAVA',theme_id=4;
-insert into redline.sous_theme set id=2,nom_soustheme='Langages du WEB',theme_id=4;
+insert into redline.sous_theme set id=1,nom_soustheme='Langages du WEB',theme_id=4;
+insert into redline.sous_theme set id=2,nom_soustheme='JAVA',theme_id=4;
 insert into redline.sous_theme set id=3,nom_soustheme='C#',theme_id=4;
 insert into redline.sous_theme set id=4,nom_soustheme='C/C++',theme_id=4;
 insert into redline.sous_theme set id=5,nom_soustheme='XML',theme_id=4;
@@ -59,15 +59,15 @@ insert into redline.formation set id=26,nom_formation='Sécurité des réseaux p
 
 insert into redline.soustheme_formation set soustheme_id=1,formation_id=1;
 insert into redline.soustheme_formation set soustheme_id=1,formation_id=2;
-insert into redline.soustheme_formation set soustheme_id=1,formation_id=3;
-insert into redline.soustheme_formation set soustheme_id=1,formation_id=4;
 insert into redline.soustheme_formation set soustheme_id=1,formation_id=5;
+insert into redline.soustheme_formation set soustheme_id=1,formation_id=6;
+insert into redline.soustheme_formation set soustheme_id=1,formation_id=15;
+insert into redline.soustheme_formation set soustheme_id=1,formation_id=16;
 
 insert into redline.soustheme_formation set soustheme_id=2,formation_id=1;
+insert into redline.soustheme_formation set soustheme_id=2,formation_id=3;
+insert into redline.soustheme_formation set soustheme_id=2,formation_id=4;
 insert into redline.soustheme_formation set soustheme_id=2,formation_id=5;
-insert into redline.soustheme_formation set soustheme_id=2,formation_id=6;
-insert into redline.soustheme_formation set soustheme_id=2,formation_id=15;
-insert into redline.soustheme_formation set soustheme_id=2,formation_id=16;
 
 insert into redline.soustheme_formation set soustheme_id=3,formation_id=7;
 insert into redline.soustheme_formation set soustheme_id=3,formation_id=8;

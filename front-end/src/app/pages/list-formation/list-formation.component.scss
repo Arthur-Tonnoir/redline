@@ -4,20 +4,26 @@
   margin-right: auto;
   width: 90em;
   min-height: 60em;
+  color: #2F4F4F;
 }
 
 /*accordion*/
 .accordion {
   width: 90em;
 }
+
 /*accordion */
 .accordion-button {
-  background-color: #c0c0c0;
+  background-color: #CCFFE5;
+  text-decoration: none;
+  color: #2F4F4F;
+  font: 0.8em sans-serif;
 }
 
 .accordion-button:focus {
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.125);
+
 }
 
 /*accordion */
@@ -29,4 +35,9 @@
 
 button {
   height: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: #2F4F4F;
 }

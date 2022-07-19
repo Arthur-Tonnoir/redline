@@ -34,13 +34,13 @@ export class EnregSessionComponent implements OnInit {
   {
     this.utilisateurForm = this.formBuilder.group({
       id: [''],
-      nom: ['', [Validators.minLength(2), Validators.required]],
-      prenom: ['', [Validators.minLength(2), Validators.required]],
-      email: ['', [Validators.email, Validators.required]],
-      telephone: ['', [Validators.minLength(10), Validators.required]],
+      nom: ['Bertrand', [Validators.minLength(2), Validators.required]],
+      prenom: ['Jean', [Validators.minLength(2), Validators.required]],
+      email: ['jeanbertrand@yahoo.cr', [Validators.email, Validators.required]],
+      telephone: ['0684257978', [Validators.minLength(10), Validators.required]],
       fonctionResponsable: [''],
       serviceAssocie: [''],
-      nomEntreprise: [''],
+      nomEntreprise: ['Microsoft'],
       session: [''],
       experience: [''],
       noteFormateur: [''],
@@ -53,11 +53,11 @@ export class EnregSessionComponent implements OnInit {
 
     this.adresseForm = this.formBuilder.group({
       id: ['', [Validators.minLength(1), Validators.required]],
-      numero: ['', [Validators.minLength(1), Validators.required]],
-      rue: ['', [Validators.minLength(2), Validators.required]],
+      numero: ['128', [Validators.minLength(1), Validators.required]],
+      rue: ['rue du malinois', [Validators.minLength(2), Validators.required]],
       complement: [''],
-      codePostal: ['', [Validators.minLength(5), Validators.required]],
-      ville: ['', [Validators.minLength(2), Validators.required]],
+      codePostal: ['59000', [Validators.minLength(5), Validators.required]],
+      ville: ['Lille', [Validators.minLength(2), Validators.required]],
     });
 
     this.utilisateurForm.addControl('adresse', this.adresseForm);

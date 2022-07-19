@@ -9,15 +9,19 @@
 /*accordion */
 .accordion {
   width: 90em;
+   overflow: hidden;
 }
 
 .accordion-button {
-  background-color: #c0c0c0;
+  background-color: #CCFFE5;
+  color: #2F4F4F;
+  font: 0.8em sans-serif;
+  
 }
 
 .accordion-button:focus {
   box-shadow: none;
-  border-color: rgba(0, 0, 0, 0.125);
+  border-color: #2F4F4F;
 }
 
 /*accordion */
@@ -29,4 +33,27 @@
 
 button {
   height: 5em;
+  color: #2F4F4F;
+}
+
+a {
+  text-decoration: none;
+  color: #2F4F4F;
+}
+
+h1 {
+  color: #2F4F4F;
+}
+.active, .accordion-button:hover {
+  background-color: #649797;
+}
+
+.accordion-button:after {
+  content: icon white;
+  color: #2F4F4F;
+  font-weight: bold;
+}
+
+.active:after {
+  color: #2F4F4F;
 }
