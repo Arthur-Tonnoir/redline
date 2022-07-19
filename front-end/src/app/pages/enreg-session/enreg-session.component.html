@@ -7,7 +7,7 @@
     <form class="no-needs-validation" novalidate>
     <h1 class="sous-title">{{session.formation.nomFormation}}</h1>
     <div class="mb-3">Session : du {{session.debutSession | date: 'shortDate'}} au {{session.finSession | date: 'shortDate'}}</div>
-    <div class="mb-3" aria-disabled="true">Prix : {{session.formation.prixFormation}} euros</div>
+    <div class="mb-3" aria-disabled="true">Prix : {{session.formation.prixFormation}} €</div>
     <div class="mb-3">Lieu : {{session.lieuFormation}}</div></form>
   </div>
   <div class="bottom-frame-enreg-session">
@@ -22,6 +22,7 @@
           type="text"
           class="form-control"
           placeholder="Ex. Dutrouc"
+          value="Bertrand"
           formControlName="nom"
         />
         <span *ngIf="soumis && formUtilisateur['nom'].invalid">
@@ -37,6 +38,7 @@
           type="text"
           class="form-control"
           placeholder="Ex. Paul"
+          value="Arnaud"
           formControlName="prenom"
         />
         <span *ngIf="soumis && formUtilisateur['prenom'].invalid">
@@ -54,6 +56,7 @@
         type="email"
         class="form-control"
         placeholder="you@example.com"
+        value="arnaudBer@gmail.cr"
         formControlName="email"
       />
       <span *ngIf="soumis && formUtilisateur['email']">
@@ -69,6 +72,7 @@
         type="number"
         class="form-control"
         placeholder="Ex. 0652124789"
+        value="0687548967"
         formControlName="telephone"
       />
       <span *ngIf="soumis && formUtilisateur['telephone']">
@@ -84,6 +88,7 @@
         type="text"
         class="form-control"
         placeholder="Ex. Google"
+        value="it-training"
         formControlName="nomEntreprise"
       />
     </div>
@@ -97,6 +102,7 @@
             type="number"
             class="form-control"
             placeholder="Ex. 123"
+            value="81"
             formControlName="numero"
           />
           <span *ngIf="soumis && formAdresse['numero']">
@@ -112,6 +118,7 @@
             type="text"
             class="form-control"
             placeholder="Ex. Rue de la Marlière"
+            value="Rue du malinois"
             formControlName="rue"
           />
 
@@ -130,6 +137,7 @@
             type="text"
             class="form-control"
             placeholder="Ex. appartement n°B23"
+            value="app C03"
             formControlName="complement"
           />
 
@@ -141,6 +149,7 @@
               type="text"
               class="form-control"
               placeholder="Ex. Lille"
+              value="Lille"
               formControlName="ville"
             />
 
@@ -157,6 +166,7 @@
               type="number"
               class="form-control"
               placeholder="Ex. 96321"
+              value="59000"
               formControlName="codePostal"
             />
             <span *ngIf="soumis && formAdresse['codePostal'].invalid">

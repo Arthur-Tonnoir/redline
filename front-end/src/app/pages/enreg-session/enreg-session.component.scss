@@ -5,11 +5,12 @@
   margin-right: auto;
   width: 90em;
   min-height: 60em;
+  color: #2F4F4F;
 }
 //la div qui contient le titre principale du formulaire
 .top-frame-enreg-session {
   font-size: medium;
-  background-color: #c0c0c0;
+  background-color: #CCFFE5;
   height: 5em;
   align-items: center;
   display: flex;
@@ -17,7 +18,7 @@
 }
 //la div qui contient les éléments du formulaire à remplir
 .middle-frame-enreg-session {
-  background-color: #c0c0c0;
+  background-color: #CCFFE5;
   margin-top: 20px;
   height: auto;
 }
@@ -53,14 +54,17 @@ text-align: center;
 
 //le bouton de validation du formulaire
 .btn-validation-formulaire{
-  border-radius: 0 !important;
-  background-color: gray;
+ // border-radius: 0 !important;
+  background-color: #2F4F4F;
+  border: solid #2F4F4F;
   width: 7em;
   font-size: 2em;
   margin-left: 38em;
   //outline: none !important;
   box-shadow: none;
   margin-bottom: 2em;
+  color: white;
+  border-radius: 0.5em;
 }
 
 hr{

@@ -4,7 +4,8 @@
   margin-right: auto;
   width: 90em;
   min-height: 60em;
-  background-color: #c0c0c0;
+ // background-color: #c0c0c0;
+  color: #2F4F4F;
 }
 
 .top-div {
@@ -13,7 +14,8 @@
   align-items: center;
   width: 90em;
   height: 4em;
-  border: solid white 1px;
+  border: solid #CCFFE5 1px;
+  background-color: #CCFFE5;
 }
 
 .middle-div {
@@ -24,7 +26,8 @@
   align-items: top;
   width: 90em;
   height: 28em;
-  border: solid white 1px;
+  border: solid #c0c0c0 0.5px;
+  background-color: white;
 }
 .middle-div-phone {
   margin-top: 1em;
@@ -43,7 +46,8 @@
   padding-left: 2em;
   width: 90em;
   height: 40em;
-  border: solid white 1px;
+  border: 0.5px solid #CCFFE5;
+  background-color: #CCFFE5;
 }
 #input-mail-adresse {
   width: 45em;
@@ -57,12 +61,18 @@
   margin-left: 0;
 }
 .bottom-div .btn {
-  color: black;
-  background-color: gray;
+  
   margin-left: 45%;
-  border-radius: 0 !important;
   outline: none !important;
   box-shadow: none;
+  background-color: #2F4F4F;
+  border: solid #2F4F4F;
+  width: 7em;
+  font-size: 2em;
+  margin-left: 26.5em;
+  margin-bottom: 2em;
+  color: white;
+  border-radius: 0.5em;
 }
 label {
   margin-top: 1em;
