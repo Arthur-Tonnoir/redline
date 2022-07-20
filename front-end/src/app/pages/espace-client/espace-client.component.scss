@@ -5,7 +5,7 @@
   margin-right: auto;
   width: 90em;
   min-height: 60em;
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
 }
 .leftbar {
   padding-top: 3em;
@@ -14,7 +14,7 @@
   align-items: center;
   width: 29.7em;
   min-height: 60em;
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
 }
 .rightbar {
   width: 60em;
@@ -30,12 +30,14 @@
 .leftbar .btn {
   border-radius: 0 !important;
   margin-top: 1em;
-  background-color: gray;
+  background-color: #cc9900;
   width: 29em;
   height: 5em;
   text-align: left;
   outline: none !important;
   box-shadow: none;
+  border: none;
+
 }
 .leftbar-footer {
   display: flex;
@@ -73,4 +75,10 @@ hr {
 
 .cours {
   width: 20em;
+}
+*{
+  color:rgb(14, 14, 102) !important;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #ffbf00;
 }

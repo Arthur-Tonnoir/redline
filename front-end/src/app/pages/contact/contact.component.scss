@@ -4,7 +4,7 @@
   margin-right: auto;
   width: 90em;
   min-height: 60em;
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
 }
 
 .top-div {
@@ -58,11 +58,12 @@
 }
 .bottom-div .btn {
   color: black;
-  background-color: gray;
+  background-color: #cc9900;
   margin-left: 45%;
   border-radius: 0 !important;
   outline: none !important;
   box-shadow: none;
+  border: none !important;
 }
 label {
   margin-top: 1em;
@@ -75,4 +76,7 @@ input {
 textarea {
   font-size: 1.5em;
   border-radius: 0 !important;
+}
+*{
+  color:rgb(14, 14, 102) !important;
 }

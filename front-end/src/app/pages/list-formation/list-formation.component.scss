@@ -12,12 +12,12 @@
 }
 /*accordion */
 .accordion-button {
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
 }
 
 .accordion-button:focus {
   box-shadow: none;
-  border-color: rgba(0, 0, 0, 0.125);
+  border-color:#ffbf00;
 }
 
 /*accordion */
@@ -29,4 +29,7 @@
 
 button {
   height: 5em;
+}
+*{
+  color:rgb(14, 14, 102) !important;
 }

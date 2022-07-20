@@ -16,7 +16,7 @@
 
 .right-sidebar {
   width: 35em;
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
 }
 
 p {
@@ -41,7 +41,7 @@ p {
 /*collapcse*/
 body {
   color: #c0c0c0;
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
   margin-top: 30px;
 }
 
@@ -58,7 +58,7 @@ body {
 
 .collapse-detail-formation .btn {
   border-radius: 0 !important;
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
   width: 50em;
   text-align: left;
   outline: none !important;
@@ -77,7 +77,7 @@ body {
 }
 
 .session-info {
-  background-color: #c0c0c0;
+  background-color: #ffbf00;
   width: 10em;
 }
 
@@ -92,7 +92,7 @@ h3 {
 .session-info .btn {
   margin-left: 3em;
   margin-top: 3em;
-  background-color: gray;
+  background-color: #cc9900;
   width: 17em;
   border-radius: 0 !important;
   outline: none !important;
@@ -105,7 +105,7 @@ h3 {
   margin-right: auto;
   height: 2.5em;
   width: 17em;
-  background-color: gray;
+  background-color: #cc9900 ;
   border-radius: 0 !important;
   outline: none !important;
   box-shadow: none;
@@ -120,4 +120,8 @@ h3 {
   background-color: white;
   display: flex;
   justify-content: space-around;
+}
+
+*{
+  color:rgb(14, 14, 102) !important;
 }
