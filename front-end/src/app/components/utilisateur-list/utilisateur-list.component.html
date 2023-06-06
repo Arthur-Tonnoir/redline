@@ -1,0 +1,133 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 style="text-align: center">Utilisateurs</h1>
+    <br />
+    <div class="row" [hidden]="!deleteMessage">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="alert alert-info alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert">
+            <span class="material-icons">delete</span>
+            <h4><strong>L'utilisateur a été supprimé</strong></h4>
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <table
+      class="table table-hover table-sm"
+      datatable
+      [dtOptions]="dtOptions"
+      [dtTrigger]="dtTrigger"
+    >
+      <thead class="thead-light">
+        <tr>
+          <th>Utilisateur nom</th>
+          <th>Utilisateur prenom</th>
+          <th>Utilisateur Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let utilisateur of utilisateurs">
+          <td>{{ utilisateur.nom }}</td>
+          <td>{{ utilisateur.prenom }}</td>
+          <td>{{ utilisateur.email }}</td>
+          <td>
+            <button
+              (click)="deleteUtilisateur(utilisateur.id)"
+              id="delete-btn"
+              class="btn"
+            >
+              <i class="fa fa-futboll-0">Supprimer</i>
+            </button>
+            <button
+              (click)="updateUtilisateur(utilisateur.id)"
+              id="update-btn-1"
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+            >
+              Mettre à jour
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      <br />
+    </table>
+  </div>
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form [formGroup]="utilisateurupdateform" #enregu (ngSubmit)="enreg()">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-align: center">
+            Mise à jour de l'utilisateur
+          </h4>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" *ngIf="utilisateurList">
+          <div [hidden]="isupdated">
+            <div>
+              <input type="hidden" class="form-control" formControlName="id" />
+
+              <div class="form-group">
+                <label for="nom">Nom utilisateur</label>
+                <input type="text" class="form-control" formControlName="nom" />
+              </div>
+
+              <div class="form-group">
+                <label for="prenom">Prénom utilisateur </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="prenom"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email utilisateur</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="email"
+                />
+              </div>
+            </div>
+          </div>
+          <div [hidden]="!isupdated">
+            <h4>Les détails sont mis a jour!</h4>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button
+            type="submit"
+            id="update-btn-2"
+            class="btn"
+            [hidden]="isupdated"
+            data-bs-dismiss="modal"
+          >
+            Valider
+          </button>
+          <button
+            type="button"
+            class="btn"
+            data-bs-dismiss="modal"
+            (click)="changeisUpdate()"
+          >
+            Annuler
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

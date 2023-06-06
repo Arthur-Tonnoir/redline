@@ -1,0 +1,187 @@
+<div class="frame-enreg-session">
+  <div class="top-frame-enreg-session">
+    <h1 class="title">FORMULAIRE D'ENREGISTREMENT A LA SESSION PRESELECTIONNE</h1>
+  </div>
+
+  <div class="middle-frame-enreg-session" *ngIf="session">
+    <form class="no-needs-validation" novalidate>
+    <h1 class="sous-title">{{session.formation.nomFormation}}</h1>
+    <div class="mb-3">Session : du {{session.debutSession | date: 'shortDate'}} au {{session.finSession | date: 'shortDate'}}</div>
+    <div class="mb-3" aria-disabled="true">Prix : {{session.formation.prixFormation}} €</div>
+    <div class="mb-3">Lieu : {{session.lieuFormation}}</div></form>
+  </div>
+  <div class="bottom-frame-enreg-session">
+
+  <form [formGroup]="utilisateurForm" class="needs-validation" (ngSubmit)="onSubmit()">
+    <h1 class="sous-title">Civilité</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="nom">Nom : </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Ex. Dutrouc"
+          value="Bertrand"
+          formControlName="nom"
+        />
+        <span *ngIf="soumis && formUtilisateur['nom'].invalid">
+          <span *ngIf="formUtilisateur['nom'].hasError('minLenght')">
+            * Le nom doit contenir au moins 2 caractères
+          </span>
+          <span *ngIf="!formUtilisateur['nom'].value"> * Nom obligadoire </span>
+        </span>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="prenom">Prénom : </label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Ex. Paul"
+          value="Arnaud"
+          formControlName="prenom"
+        />
+        <span *ngIf="soumis && formUtilisateur['prenom'].invalid">
+          <span *ngIf="formUtilisateur['prenom'].hasError('minLenght')">
+            * Le prénom doit contenir au moins 2 caractères
+          </span>
+          <span *ngIf="!formUtilisateur['prenom'].value"> * Prénom obligadoire </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email : </label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="you@example.com"
+        value="arnaudBer@gmail.cr"
+        formControlName="email"
+      />
+      <span *ngIf="soumis && formUtilisateur['email']">
+        <span *ngIf="formUtilisateur['email'].hasError('minLenght')">
+          * L'email' doit contenir au moins 2 caractères
+        </span>
+        <span *ngIf="!formUtilisateur['email'].value"> * Email obligadoire </span>
+      </span>
+    </div>
+    <div class="mb-3">
+      <label for="telephone">Téléphone : </label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Ex. 0652124789"
+        value="0687548967"
+        formControlName="telephone"
+      />
+      <span *ngIf="soumis && formUtilisateur['telephone']">
+        * Téléphone invalide
+      </span>
+    </div>
+
+    <div class="mb-3">
+      <label for="nomEntreprise"
+        >Entreprise : <span class="text-muted">(Optional)</span></label
+      >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ex. Google"
+        value="it-training"
+        formControlName="nomEntreprise"
+      />
+    </div>
+    <h1 class="sous-title">Adresse</h1>
+    <hr>
+    <form [formGroup]="adresseForm" class="needs-validation" >
+      <ng-container >
+        <div class="mb-3">
+          <label for="numero">Numéro : </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Ex. 123"
+            value="81"
+            formControlName="numero"
+          />
+          <span *ngIf="soumis && formAdresse['numero']">
+            <span *ngIf="formAdresse['numero'].hasError('minLenght')">
+              * Le numéro de rue doit contenir au moins 1 chiffre
+            </span>
+            <span *ngIf="!formAdresse['numero'].value"> * Numéro de rue obligadoire </span>
+          </span>
+        </div>
+        <div class="mb-3">
+          <label for="rue">Rue : </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Ex. Rue de la Marlière"
+            value="Rue du malinois"
+            formControlName="rue"
+          />
+
+          <span *ngIf="soumis && formAdresse['rue'].invalid">
+            <span *ngIf="formAdresse['rue'].hasError('minLenght')">
+              * Le nom de rue doit contenir au moins 2 caractères
+            </span>
+            <span *ngIf="!formAdresse['rue'].value"> * Nom de rue obligadoire </span>
+          </span>
+        </div>
+        <div class="mb-3">
+          <label for="complement"
+            >Complément : <span class="text-muted">(Optional)</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Ex. appartement n°B23"
+            value="app C03"
+            formControlName="complement"
+          />
+
+        </div>
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="ville">Ville : </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ex. Lille"
+              value="Lille"
+              formControlName="ville"
+            />
+
+            <span *ngIf="soumis && formAdresse['ville'].invalid">
+              <span *ngIf="formAdresse['ville'].hasError('minLenght')">
+                * La ville doit contenir au moins 2 caractères
+              </span>
+              <span *ngIf="!formAdresse['ville'].value"> * Ville obligadoire </span>
+            </span>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">Code postal</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Ex. 96321"
+              value="59000"
+              formControlName="codePostal"
+            />
+            <span *ngIf="soumis && formAdresse['codePostal'].invalid">
+              <span *ngIf="formAdresse['codePostal'].hasError('minLenght')">
+                * Le code postal doit contenir au moins 2 caractères
+              </span>
+              <span *ngIf="!formAdresse['codePostal'].value"> * Code postal obligadoire </span>
+            </span>
+          </div>
+        </div>
+      </ng-container>
+    </form>
+    <button class="btn-validation-formulaire" type="submit">
+          Valider
+        </button>
+</form>
+  </div>
+</div>

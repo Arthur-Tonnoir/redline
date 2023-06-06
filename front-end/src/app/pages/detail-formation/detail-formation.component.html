@@ -1,0 +1,93 @@
+<div class="frame-detail-formation" *ngIf="formation">
+  <div class="left-sidebar">
+    <span class="title-formation">
+      <h1>{{ formation.nomFormation }}</h1>
+    </span>
+
+    <p>
+      {{ formation.contenu }}
+    </p>
+
+    <!-- collapse -->
+    <div class="collapse-detail-formation">
+      <p>
+        <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+          aria-controls="collapseExample">
+          <h3>Général</h3>
+        </a>
+      </p>
+      <div class="collapse show" id="collapseExample">
+        <div class="card card-body">
+          Les informations générales concernant la formation. C'est ici que l'on verra les objectifs de la formation par exemple.
+        </div>
+      </div>
+
+      <p>
+        <a class="btn" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
+          aria-controls="collapseExample">
+          <h3>Pré-requis</h3>
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample1">
+        <div class="card card-body">
+          Les prérequis requis afin de pouvoir s'inscrire à la formation.
+        </div>
+      </div>
+
+      <p>
+        <a class="btn" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
+          aria-controls="collapseExample">
+          <h3>Programme détaillé</h3>
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body">
+          Ce volet abordera de façon globale les différents modules qui seront dispensés durant la formation.
+        </div>
+      </div>
+    </div>
+
+    <!-- collapse -->
+  </div>
+
+  <div class="right-sidebar">
+    <div class="right-sidebar-div-top">
+      <section>
+        <h3>Formation inter intreprise</h3>
+        <ul>
+          <h4>Détails</h4>
+          <li>
+            <h6>Durée</h6>
+          </li>
+          <li>
+            <h6>Prix {{ formation.prixFormation }} €</h6>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+      <h3>Liste des sessions disponibles</h3>
+
+      <div class="session-info" *ngIf="listSession.length > 0">
+        <section>
+          <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedSessionId">
+            <mat-radio-button *ngFor="let session of listSession" [value]="session.id">{{ session.debutSession | date:
+              "shortDate" }} au
+              {{ session.finSession | date: "shortDate" }} à
+              {{ session.lieuFormation }}</mat-radio-button>
+          </mat-radio-group>
+
+          <button class="btn btn-lg" routerLink="/enregsession/{{ selectedSessionId }}">
+            Inscrivez-vous
+          </button>
+        </section>
+      </div>
+    </div>
+
+    <div class="rightbottombar">
+      <button id="btnintra" class="btn btn-lg">
+        Formation intra-entreprise
+      </button>
+    </div>
+  </div>
+</div>

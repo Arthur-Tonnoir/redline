@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1px;
+  height: 15em;
+  background-color: white;
+  color: #2F4F4F;
+  font:bold;
+  border-style: outset;
+}
+
+.footer div {
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+.foot-icon-row {
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  list-style-type: none;
+}

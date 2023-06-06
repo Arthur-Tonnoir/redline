@@ -1,0 +1,88 @@
+.frame-detail-contact {
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90em;
+  min-height: 60em;
+ // background-color: #c0c0c0;
+  color: #2F4F4F;
+}
+
+.top-div {
+  display: flex;
+  padding-left: 2em;
+  align-items: center;
+  width: 90em;
+  height: 4em;
+  border: solid #CCFFE5 1px;
+  background-color: #CCFFE5;
+}
+
+.middle-div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-left: 2em;
+  align-items: top;
+  width: 90em;
+  height: 28em;
+  border: solid #c0c0c0 0.5px;
+  background-color: white;
+}
+.middle-div-phone {
+  margin-top: 1em;
+}
+.middle-div-email {
+  margin-top: 3em;
+}
+.middle-div-adresse {
+  margin-top: 3em;
+}
+
+.bottom-div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-left: 2em;
+  width: 90em;
+  height: 40em;
+  border: 0.5px solid #CCFFE5;
+  background-color: #CCFFE5;
+}
+#input-mail-adresse {
+  width: 45em;
+  margin-left: 0;
+  margin-bottom: 1em;
+}
+#input-message {
+  margin-top: 1em;
+  width: 45em;
+  height: 10em;
+  margin-left: 0;
+}
+.bottom-div .btn {
+  
+  margin-left: 45%;
+  outline: none !important;
+  box-shadow: none;
+  background-color: #2F4F4F;
+  border: solid #2F4F4F;
+  width: 7em;
+  font-size: 2em;
+  margin-left: 26.5em;
+  margin-bottom: 2em;
+  color: white;
+  border-radius: 0.5em;
+}
+label {
+  margin-top: 1em;
+  margin-bottom: 1px;
+}
+input {
+  font-size: 1.5em;
+  border-radius: 0 !important;
+}
+textarea {
+  font-size: 1.5em;
+  border-radius: 0 !important;
+}

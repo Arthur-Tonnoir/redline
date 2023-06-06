@@ -1,0 +1,77 @@
+//la div qui contient tous nos éléments
+.frame-enreg-session {
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90em;
+  min-height: 60em;
+  color: #2F4F4F;
+}
+//la div qui contient le titre principale du formulaire
+.top-frame-enreg-session {
+  font-size: medium;
+  background-color: #CCFFE5;
+  height: 5em;
+  align-items: center;
+  display: flex;
+  padding-left: 5em;
+}
+//la div qui contient les éléments du formulaire à remplir
+.middle-frame-enreg-session {
+  background-color: #CCFFE5;
+  margin-top: 20px;
+  height: auto;
+}
+//le formulaire en lecture seule
+.no-needs-validation {
+  margin-left: 10px;
+  font-size: medium;
+}
+//le formulaire à remplir
+.needs-validation {
+  margin-left: 10px;
+}
+//la div qui contient les formulaires
+.bottom-frame-enreg-session {
+  margin-top: 20px;
+}
+//les label du formulaire
+.mb-3 {
+  font-size: 1.5em;
+}
+//les différents sous-titres qui subdivisent le formulaire
+.sous-title {
+  text-align: left;
+}
+//le titre principal du formulaire
+.title {
+text-align: center;
+}
+//pour les inputs du formulaire
+.form-control {
+  font-size: 1.2em;
+}
+
+//le bouton de validation du formulaire
+.btn-validation-formulaire{
+ // border-radius: 0 !important;
+  background-color: #2F4F4F;
+  border: solid #2F4F4F;
+  width: 7em;
+  font-size: 2em;
+  margin-left: 38em;
+  //outline: none !important;
+  box-shadow: none;
+  margin-bottom: 2em;
+  color: white;
+  border-radius: 0.5em;
+}
+
+hr{
+  height: 4px;
+  border-width: 2px;
+  width: 89em;
+}
+input{
+  border-radius: 0 !important;
+}

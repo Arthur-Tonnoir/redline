@@ -1,0 +1,70 @@
+<div class="navbar">
+  <h2>
+    <a routerLink="/home"
+      ><span class="logo-small-letter">i</span
+      ><span class="logo-big-letter">T</span
+      ><span class="logotext">raining</span></a
+    >
+  </h2>
+
+  <form class="wrap-searchbar">
+    <mat-form-field class="searchbar" appearance="fill">
+      <mat-label>Formation</mat-label>
+      <input matInput placeholder="Ex. mot-cle,formation" name="#" />
+      <button matSuffix mat-button>
+        <span class="material-icons large"> search </span>
+      </button>
+    </mat-form-field>
+  </form>
+
+  <div class="navbuttons-group">
+    <a href="#">ACCEUIL</a>
+
+    <!-- ============= Meganav bar ============== -->
+    <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">CATALOGUE</a>
+
+    <div class="dropdown-menu megamenu" role="menu">
+      <div class="row g-3">
+        <div class="col-lg-3 col-6" *ngFor="let domaine of domaines">
+          <div class="col-megamenu">
+            <h6 class="title">{{ domaine.nomDomaine }}</h6>
+            <div *ngFor="let theme of themes">
+              <ul
+                class="list-unstyled"
+                *ngIf="domaine.id == theme.domaineFormation.id"
+              >
+                <li>
+                  <a href="#" routerLink="/listformation/{{ theme.id }}">{{
+                    theme.nomTheme
+                  }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- col-megamenu.// -->
+        </div>
+        <!-- end col-3 -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- dropdown-mega-menu.// -->
+
+    <!-- ============= Meganav bar ============== -->
+
+    <a routerLink="/contact">CONTACT</a>
+    <a routerLink="/espaceclient">ESPACE CLIENT </a>
+  </div>
+</div>
+
+<!-- js for meganav bar -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    /// Protege la fermeture de dropdown avec click interieur
+    document.querySelectorAll(".dropdown-menu").forEach(function (element) {
+      element.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    });
+  });
+  // DOMContentLoaded fin
+</script>
